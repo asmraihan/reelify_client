@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-   content: [
+  content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
@@ -13,43 +13,44 @@ export default {
       {
         light: {
 
-          "primary": "#570d",
+          "primary": "#ffdd59",
 
-          "secondary": "#f000b8",
+          "secondary": "#f97aed",
 
-          "accent": "#1dcdbc",
+          "accent": "#3fdb6e",
 
-          "neutral": "#2b3440",
+          "neutral": "#151623",
 
-          "base-100": "#ffffff",
+          "base-100": "#f8f9fc",
 
-          "info": "#3abff8",
+          "info": "#9bcbe9",
 
-          "success": "#36d399",
+          "success": "#1a6b3e",
 
-          "warning": "#fbbd23",
+          "warning": "#dc7a18",
 
-          "error": "#f87272",
+          "error": "#e42158",
         },
         dark: {
 
-          "primary": "#f74fa0",
 
-          "secondary": "#fcbf9f",
+          "primary": "#fcffbf",
 
-          "accent": "#c0f44e",
+          "secondary": "#7ab1ef",
 
-          "neutral": "#1b1b22",
+          "accent": "#221f93",
 
-          "base-100": "#424352",
+          "neutral": "#191c1f",
 
-          "info": "#88d3e7",
+          "base-100": "#3b383d",
 
-          "success": "#0f623e",
+          "info": "#54d4ed",
 
-          "warning": "#c69c10",
+          "success": "#148f62",
 
-          "error": "#e62f28",
+          "warning": "#f1b337",
+
+          "error": "#fa4c4c",
         },
       },
     ],

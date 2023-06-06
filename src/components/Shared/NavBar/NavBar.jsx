@@ -26,9 +26,9 @@ const NavBar = () => {
             to='/classes'><li>Classes</li></NavLink>
         <NavLink className={({ isActive }) => `mx-4 mt-1  ${isActive ? 'border-b-4 border-accent-content text-accent-content' : 'text-gray-600'}`}
             to='/dashboard'><li>Dashboard</li></NavLink>
-        <NavLink className={({ isActive }) => `ml-4 mr-8 mt-1  ${isActive ? 'border-b-4 border-accent-content text-accent-content' : 'text-gray-600'}`}
+        <NavLink className={({ isActive }) => `ml-4 mr-8 mt-0.5  ${isActive ? 'border-b-4 border-accent-content text-accent-content' : 'text-gray-600'}`}
             to='/user'>{user ? <img className='w-8 h-8 rounded-full' src='' alt="" /> : <FaUser className='text-lg w-6 h-6'></FaUser>} </NavLink>
-        <NavLink
+        <div
         className='mr-8'
             to='/dashboard'>{user ? <Link
                 // onClick={handleLogOut}
@@ -41,7 +41,7 @@ const NavBar = () => {
                     className='inline-flex justify-center items-center py-2 px-5 font-medium text-center text-white btn btn-sm btn-primary normal-case'
                 >
                     Login
-                </Link>}</NavLink>
+                </Link>}</div>
         {/*  */}
      
         <label className="swap swap-rotate mr-8">
@@ -69,7 +69,7 @@ const NavBar = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                         </label>
                     </div>
-                    <div className="flex-1 px-2 mx-4"><Link>Navbar Title</Link></div>
+                    <div className="flex-1 px-2 mx-4 ml-8"><Link>Reelify</Link></div>
                     <div className="flex-none hidden lg:block">
                         <ul className="menu menu-horizontal">
                             {/* Navbar menu content here */}
