@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../providers/AuthProvider';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const SocialLogin = () => {
+    const {googleSignIn} = useContext(AuthContext)
+    const navigate = useNavigate()
+    const location = useLocation()
+    const from = location.state?.from?.pathname || '/'
+    const handleGoogleSignIn = ()=>{
+        googleSignIn()
+        .then(result=>{
+          const user = result.user
+          // console.log(user)
+          navigate(from, {replace : true})
+        
+      })
+      .catch(error=>{
+          console.log(error.message)
+      })
+      }
     return (
         <div className="flex items-center justify-center mt-4">
-  <button className="flex items-center bg-white border rounded-lg shadow-md px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 ">
+  <button onClick={handleGoogleSignIn} className="flex items-center bg-white border rounded-lg shadow-md px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 ">
     <svg
       className="h-6 w-6 mr-2"
       xmlns="http://www.w3.org/2000/svg"
