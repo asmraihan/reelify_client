@@ -25,7 +25,7 @@ export default {
 
           "info": "#9bcbe9",
 
-          "success": "#29a869",
+          "success": "#29a876",
 
           "warning": "#dc7a18",
 

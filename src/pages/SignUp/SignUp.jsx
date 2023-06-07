@@ -1,12 +1,32 @@
 
 import { useForm } from 'react-hook-form';
 import SocialLogin from '../../components/Shared/SocialLogin';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../../providers/AuthProvider';
+import { toast } from 'react-hot-toast';
 
 const SignUp = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
+    const navigate = useNavigate()
+    const {createUser, updateUserProfile} = useContext(AuthContext)
     const onSubmit = data => {
         console.log(data)
+        createUser(data.email, data.password)
+        .then(result=>{
+            const loggedUser = result.user
+            console.log(loggedUser)
+            updateUserProfile(data.name, data.photo)
+            .then(()=>{
+                console.log('user updated')
+                reset()
+                toast.success('Profile Created successfully')
+                navigate('/')
+            })
+            .catch(err=>{
+                console.log(err)
+            })
+        })
     }
  
 
@@ -146,7 +166,7 @@ const SignUp = () => {
                       </input>
                     </div>
                     <p className="text-xs text-gray-600 sm:text-sm text-center">
-                    Already have an account? <Link to='/signup'>Please Login</Link>
+                    Already have an account? <Link to='/login'>Please Login</Link>
                     </p>
                   </form>
                   <SocialLogin></SocialLogin>

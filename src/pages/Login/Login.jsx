@@ -1,18 +1,29 @@
 import React, { useContext } from 'react';
 import SocialLogin from '../../components/Shared/SocialLogin';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-hot-toast';
 
 
 const Login = () => {
-
+    const location = useLocation()
+    const navigate = useNavigate()
+    const from = location.state?.from?.pathname || '/'
+    const { signIn } = useContext(AuthContext)
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data)
+        signIn(data.email, data.password)
+        .then(result=>{
+            const loggedUser = result.user
+            console.log(loggedUser)
+            toast.success(`Welcome ${loggedUser.email}`)
+            navigate(from, {replace: true})
+        })
     }
-    console.log(watch("example"));
-    const { signIn } = useContext(AuthContext)
+   
+    
 
     return (
         <div className="relative">
@@ -68,24 +79,6 @@ const Login = () => {
 
                                     <div className="mb-1 sm:mb-2">
                                         <label
-                                            htmlFor="name"
-                                            className="inline-block mb-1 font-medium"
-                                        >
-                                            Name
-                                        </label>
-                                        <input
-                                            placeholder="Your Name"
-                                            required
-                                            type="text"
-                                            className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
-                                            id="firstName"
-                                            name="name"
-                                            {...register("name")}
-                                        />
-                                    </div>
-
-                                    <div className="mb-1 sm:mb-2">
-                                        <label
                                             htmlFor="email"
                                             className="inline-block mb-1 font-medium"
                                         >
@@ -99,6 +92,24 @@ const Login = () => {
                                             id="email"
                                             name="email"
                                             {...register("email")}
+                                        />
+                                    </div>
+
+                                    <div className="mb-1 sm:mb-2">
+                                        <label
+                                            htmlFor="password"
+                                            className="inline-block mb-1 font-medium"
+                                        >
+                                            Password
+                                        </label>
+                                        <input
+                                            placeholder="*********"
+                                            required
+                                            type="password"
+                                            className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                                            id="firstName"
+                                            name="password"
+                                            {...register("password")}
                                         />
                                     </div>
 
