@@ -21,36 +21,36 @@ export default {
 
           "neutral": "#151623",
 
-          "base-100": "#f8f9fc",
+          "base-100": "#f7f7f9",
 
           "info": "#9bcbe9",
 
-          "success": "#1a6b3e",
+          "success": "#29a869",
 
           "warning": "#dc7a18",
 
-          "error": "#e42158",
+          "error": "#fa4c4c",
         },
         dark: {
 
 
-          "primary": "#fcffbf",
+          "primary": "#040714",
 
           "secondary": "#7ab1ef",
 
           "accent": "#221f93",
 
-          "neutral": "#191c1f",
+          "neutral": "#272c35",
 
-          "base-100": "#3b383d",
+          "base-100": "#0b0c0f",
 
           "info": "#54d4ed",
 
-          "success": "#148f62",
+          "success": "#29a869",
 
           "warning": "#f1b337",
 
-          "error": "#fa4c4c",
+          "error": "#e50914",
         },
       },
     ],
