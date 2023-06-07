@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import SocialLogin from '../../components/Shared/SocialLogin';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
@@ -23,7 +23,8 @@ const Login = () => {
         })
     }
    
-    
+    const [showPassword, setShowPassword] = useState(false)
+    console.log(showPassword)
 
     return (
         <div className="relative">
@@ -105,12 +106,14 @@ const Login = () => {
                                         <input
                                             placeholder="*********"
                                             required
-                                            type="password"
+                                            type={showPassword ? "text" : "password"}
                                             className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
                                             id="firstName"
                                             name="password"
                                             {...register("password")}
                                         />
+                                       <div className='flex justify-between items-center my-2'> <p>Show password</p>
+                                        <input onChange={()=>setShowPassword(!showPassword)} type="checkbox" checked={showPassword ? 'checked' : ''} className="checkbox" /></div>
                                     </div>
 
                                     <div className="mt-4 mb-2 sm:mb-4">
