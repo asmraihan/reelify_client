@@ -27,18 +27,24 @@ const NavBar = () => {
         document.querySelector('html').setAttribute('data-theme', localTheme)
     }, [theme])
     const menuItems = <>
-        <NavLink className={({ isActive }) => `mx-4 mt-2 text-gray-100 ${isActive ? 'border-b-4 border-success' : 'text-neutral-300'}`}
+        <NavLink className={({ isActive }) => `mx-4 mt-2  ${isActive ? 'border-b-4 border-success ' : ''}`}
             to='/'><li>Home</li></NavLink>
-        <NavLink className={({ isActive }) => `mx-4 mt-2 text-gray-100 ${isActive ? 'border-b-4 border-success ' : 'text-neutral-300'}`}
+        <NavLink className={({ isActive }) => `mx-4 mt-2  ${isActive ? 'border-b-4 border-success ' : ''}`}
             to='/instructors'><li>Instructors</li></NavLink>
-        <NavLink className={({ isActive }) => `mx-4 mt-2 text-gray-100 ${isActive ? 'border-b-4 border-success ' : 'text-neutral-300'}`}
+        <NavLink className={({ isActive }) => `mx-4 mt-2  ${isActive ? 'border-b-4 border-success ' : ''}`}
             to='/classes'><li>Classes</li></NavLink>
-        <NavLink className={({ isActive }) => `mx-4 mt-2 text-gray-100 ${isActive ? 'border-b-4 border-success ' : 'text-neutral-300'}`}
-            to='/dashboard'><li>Dashboard</li></NavLink>
-       {user &&  <NavLink className={({ isActive }) => `ml-4 mr-8 mt-0.5  ${isActive ? 'border-b-4 border-success ' : 'text-neutral-300'}`}
-            to='/user'>{user.photoURL ? <img referrerPolicy='no-referrer' className='w-8 h-8 rounded-full' src={user?.photoURL} alt="" /> : <FaUser className='text-lg w-6 h-6 mt-0.5'></FaUser>} </NavLink>}
+
+        {user &&
+            <>
+                <NavLink className={({ isActive }) => `mx-4 mt-2  ${isActive ? 'border-b-4 border-success ' : ''}`}
+                    to='/dashboard'><li>Dashboard</li></NavLink>
+                <NavLink className={({ isActive }) => `ml-4 mr-8 mt-0.5  ${isActive ? 'border-b-4 border-success ' : ''}`}
+                    to='/user'>{user.photoURL ? <img referrerPolicy='no-referrer' className='w-8 h-8 rounded-full' src={user?.photoURL} alt="" /> : <FaUser className='text-lg w-6 h-6 mt-0.5'></FaUser>} </NavLink>
+
+            </>
+        }
         <div
-        className='mr-8 mt-0.5'
+            className='mr-8 mt-0.5'
             to='/dashboard'>{user ? <Link
                 onClick={handleLogOut}
                 className='inline-flex justify-center items-center py-2 px-5 font-medium text-center text-white 
@@ -53,7 +59,7 @@ const NavBar = () => {
                     Login
                 </Link>}</div>
         {/*  */}
-     
+
         <label className="swap swap-rotate mr-8">
             {/* this hidden checkbox controls the state */}
             <input type="checkbox"

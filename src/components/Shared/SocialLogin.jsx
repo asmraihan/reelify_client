@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { saveUser } from '../../api/auth';
 
 const SocialLogin = () => {
     const {googleSignIn} = useContext(AuthContext)
@@ -10,8 +11,10 @@ const SocialLogin = () => {
     const handleGoogleSignIn = ()=>{
         googleSignIn()
         .then(result=>{
-          const user = result.user
+          const loggedUser = result.user
           // console.log(user)
+           // save user to db
+           saveUser(loggedUser)
           navigate(from, {replace : true})
         
       })

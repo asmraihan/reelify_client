@@ -12,24 +12,15 @@ export default {
     themes: [
       {
         light: {
-
-          "primary": "#ffdd59",
-
-          "secondary": "#f97aed",
-
-          "accent": "#3fdb6e",
-
-          "neutral": "#151623",
-
-          "base-100": "#f7f7f9",
-
-          "info": "#9bcbe9",
-
-          "success": "#29a876",
-
-          "warning": "#dc7a18",
-
-          "error": "#ef4444",
+          "primary": "#29a876",
+          "secondary": "#3B82F6",
+          "accent": "#A855F7",
+          "neutral": "#faf9fb", 
+          "base-100": "#f2f2f3",
+          "info": "#2775C3",
+          "success": "#4ADE80",
+          "warning": "#EAB308",
+          "error": "#EF4444",
         },
         dark: {
           "primary": "#29a876",

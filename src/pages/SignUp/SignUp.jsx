@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import { toast } from 'react-hot-toast';
+import { saveUser } from '../../api/auth';
 
 const SignUp = () => {
     const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
@@ -21,6 +22,8 @@ const SignUp = () => {
                 console.log('user updated')
                 reset()
                 toast.success('Profile Created successfully')
+                // save user to db
+                saveUser(loggedUser)
                 navigate('/')
             })
             .catch(err=>{
