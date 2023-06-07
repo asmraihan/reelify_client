@@ -1,6 +1,16 @@
-import React from 'react';
+
+import { useForm } from 'react-hook-form';
+import SocialLogin from '../../components/Shared/SocialLogin';
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const onSubmit = data => {
+        console.log(data)
+    }
+ 
+
+
     return (
         <div className="relative">
         <img
@@ -26,39 +36,25 @@ const SignUp = () => {
                   <h3 className="mb-4 text-xl font-semibold sm:text-center sm:mb-6 sm:text-2xl">
                     Sign up for updates
                   </h3>
-                  <form>
+                  <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="mb-1 sm:mb-2">
                       <label
-                        htmlFor="firstName"
+                        htmlFor="name"
                         className="inline-block mb-1 font-medium"
                       >
-                        First name
+                        Name
                       </label>
                       <input
-                        placeholder="John"
-                        required
+                        placeholder="Your Name"
                         type="text"
                         className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
                         id="firstName"
-                        name="firstName"
+                        name="name"
+                        {...register("name", { required: true })} 
                       />
+                       {errors.name && <span className='text-red-600'>Name is required</span>}
                     </div>
-                    <div className="mb-1 sm:mb-2">
-                      <label
-                        htmlFor="lastName"
-                        className="inline-block mb-1 font-medium"
-                      >
-                        Last name
-                      </label>
-                      <input
-                        placeholder="Doe"
-                        required
-                        type="text"
-                        className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
-                        id="lastName"
-                        name="lastName"
-                      />
-                    </div>
+                
                     <div className="mb-1 sm:mb-2">
                       <label
                         htmlFor="email"
@@ -67,26 +63,93 @@ const SignUp = () => {
                         E-mail
                       </label>
                       <input
-                        placeholder="john.doe@example.org"
-                        required
+                        placeholder="Your Email Address"
                         type="text"
                         className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
                         id="email"
                         name="email"
+                        {...register("email", { required: true })} 
+                        />
+                         {errors.email && <span className='text-red-600'>Email is required</span>}
+                    </div>
+
+                    <div className="mb-1 sm:mb-2">
+                      <label
+                        htmlFor="password"
+                        className="inline-block mb-1 font-medium"
+                      >
+                        Password
+                      </label>
+                      <input
+                        placeholder="**********"
+                        type="password"
+                        className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                        id="password"
+                        name="password"
+                        {...register("password",{ required: true, minLength: 6 ,
+                            pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[a-z]).{6,}/ })} 
+                        />
+                      {errors.password?.type === 'required' && <p className='text-red-600'>Password is required</p>}
+                      {errors.password?.type === 'minLength' && <p className='text-red-600'>Password must be at least 6 character</p>}
+                      {errors.password?.type === 'pattern' && <p className='text-red-600'>Password must have one upper case and one special character</p>}
+                    </div>
+
+                    <div className="mb-1 sm:mb-2">
+                      <label
+                        htmlFor="confirm_password"
+                        className="inline-block mb-1 font-medium"
+                      >
+                        Confirm Password
+                      </label>
+                      <input
+                        placeholder="**********"
+                        type="password"
+                        className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                        id="confirm_password"
+                        name="confirm_password"
+                        // validate confirm_password
+                        {...register("confirm_password", { required: true, validate: (value) => {
+                            if (watch('password') != value) {
+                              return "Password did not match";
+                            }
+                          },
+                         })} 
+                        />
+                           {errors.confirm_password?.type === 'validate' && <p className='text-red-600'>Password did not match</p>}
+                    </div>
+
+                    <div className="mb-1 sm:mb-2">
+                      <label
+                        htmlFor="photo"
+                        className="inline-block mb-1 font-medium"
+                      >
+                       Photo URL
+                      </label>
+                      <input
+                        placeholder="Link of PhotoURL"
+                        type="text"
+                        className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                        id="photo"
+                        name="photo"
+                        {...register("photo")}
                       />
                     </div>
+
+                    
                     <div className="mt-4 mb-2 sm:mb-4">
-                      <button
+                      <input
                         type="submit"
-                        className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-accent hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                        value="Sign Up"
+                        className="inline-flex cursor-pointer items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-accent hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                       >
-                        Subscribe
-                      </button>
+                        
+                      </input>
                     </div>
-                    <p className="text-xs text-gray-600 sm:text-sm">
-                      We respect your privacy. Unsubscribe at any time.
+                    <p className="text-xs text-gray-600 sm:text-sm text-center">
+                    Already have an account? <Link to='/signup'>Please Login</Link>
                     </p>
                   </form>
+                  <SocialLogin></SocialLogin>
                 </div>
               </div>
               <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">

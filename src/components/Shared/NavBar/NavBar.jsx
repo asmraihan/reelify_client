@@ -38,7 +38,7 @@ const NavBar = () => {
             </Link> :
                 <Link
                     to='/login'
-                    className='inline-flex justify-center items-center py-2 px-5 font-medium text-center text-white btn btn-sm btn-primary normal-case'
+                    className='inline-flex justify-center items-center py-2 px-5 font-medium text-center text-white btn btn-sm btn-success normal-case'
                 >
                     Login
                 </Link>}</div>
