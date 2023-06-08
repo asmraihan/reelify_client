@@ -1,44 +1,42 @@
 import React from 'react';
+import ButtonDefault from '../Button/ButtonDefault';
 
-const ClassCard = () => {
+const ClassCard = ({singleClass}) => {
+    // console.log(singleClass)
+    const {name, photo, instructor, email, seats, price, createdAt} = singleClass
+  
     return (
-        <div className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm">
+        <div className={`overflow-hidden ${seats === 0 ? 'bg-red-200' : 'bg-neutral' } rounded`}>
         <img
-          src="https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500"
+          src={photo}
           className="object-cover w-full h-64"
           alt=""
         />
-        <div className="p-5 border border-t-0">
+        <div className="p-5">
           <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
-            <a
-              href="/"
-              className="transition-colors duration-200 text-blue-gray-900 hover:text-deep-purple-accent-700"
+            <span
+          
+              className="text-blue-gray-900 "
               aria-label="Category"
               title="traveling"
             >
-              traveling
-            </a>
-            <span className="text-gray-600">— 28 Dec 2020</span>
+              Class added - 
+            </span>
+            <span className=""> {createdAt}</span>
           </p>
-          <a
-            href="/"
-            aria-label="Category"
-            title="Visit the East"
-            className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700"
+          <p
+            aria-label="classname"
+            title="classname"
+            className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-accent"
           >
-            Visit the East
-          </a>
-          <p className="mb-2 text-gray-700">
-            Sed ut perspiciatis unde omnis iste natus error sit sed quia
-            consequuntur magni voluptatem doloremque.
+           {name}
           </p>
-          <a
-            href="/"
-            aria-label=""
-            className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-          >
-            Learn more
-          </a>
+          <p className="mb-2 ">Instructor name : {instructor}</p>
+         <div className='text-red-600 dark:text-green-500'>
+         <p className="mb-2 ">Available Seats : {seats}</p>
+         <p className="mb-2 ">Price : {price}</p>
+         </div>
+          <ButtonDefault btnText={ seats === 0 ? 'Seat Unavailable' : 'Enroll Now'}></ButtonDefault>
         </div>
       </div>
     );

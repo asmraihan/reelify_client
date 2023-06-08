@@ -1,6 +1,4 @@
 import { useQuery } from "@tanstack/react-query";
-import ButtonDefault from "../../components/Button/ButtonDefault";
-import ButtonOutlined from "../../components/Button/ButtonOutlined";
 import ClassCard from "../../components/Card/ClassCard";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -23,7 +21,7 @@ const Classes = () => {
         {
             classes.map((singleClass)=>
                 <ClassCard key={singleClass._id} singleClass={singleClass}/>
-            
+
         )
         }
       

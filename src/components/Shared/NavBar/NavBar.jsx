@@ -25,6 +25,7 @@ const NavBar = () => {
         localStorage.setItem('theme', theme)
         const localTheme = localStorage.getItem('theme')
         document.querySelector('html').setAttribute('data-theme', localTheme)
+     
     }, [theme])
     const menuItems = <>
         <NavLink className={({ isActive }) => `mx-4 mt-2  ${isActive ? 'border-b-4 border-success ' : ''}`}
