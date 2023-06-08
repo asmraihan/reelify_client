@@ -18,6 +18,7 @@ const AddClasses = () => {
                 instructor: instructor.value,
                 email: email.value,
                 seats: parseInt(seats.value),
+                students: 0,
                 price: parseFloat(price.value),
                 description: details.value,
                 createdAt: new Date().toLocaleString(),

@@ -11,13 +11,9 @@ const MyClasses = () => {
         queryKey: ['classes', user?.email],
         enabled: !loading,
         queryFn: async () => {
-            const res = await fetch(`${import.meta.env.VITE_API_URL}/classes/${user?.email}`,{
-                headers: {
-                    authorization: `Bearer ${localStorage.getItem('access-token')}`
-                }
-            })
-            const data = await res.json()
-            return data
+            const res = await axiosSecure.get(`/classes/${user?.email}`)
+            console.log('from axiosSecure',res.data)
+            return res.data
         }
     })
     return (
