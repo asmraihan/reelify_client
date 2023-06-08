@@ -39,7 +39,7 @@ const NavBar = () => {
                 <NavLink className={({ isActive }) => `mx-4 mt-2  ${isActive ? 'border-b-4 border-success ' : ''}`}
                     to='/dashboard'><li>Dashboard</li></NavLink>
                 <NavLink className={({ isActive }) => `ml-4 mr-8 mt-0.5  ${isActive ? 'border-b-4 border-success ' : ''}`}
-                    to='/user'>{user.photoURL ? <img referrerPolicy='no-referrer' className='w-8 h-8 rounded-full' src={user?.photoURL} alt="" /> : <FaUser className='text-lg w-6 h-6 mt-0.5'></FaUser>} </NavLink>
+                    to='/dashboard'>{user.photoURL ? <img referrerPolicy='no-referrer' className='w-8 h-8 rounded-full' src={user?.photoURL} alt="" /> : <FaUser className='text-lg w-6 h-6 mt-0.5'></FaUser>} </NavLink>
 
             </>
         }

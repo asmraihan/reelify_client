@@ -14,6 +14,7 @@ import MyClasses from '../pages/Dashboard/MyClasses'
 import AddClasses from '../pages/Dashboard/AddClasses'
 import ManageUsers from '../pages/Dashboard/ManageUsers'
 import ManageClasses from '../pages/Dashboard/ManageClasses'
+import UserProfile from '../pages/Dashboard/UserProfile'
 
 
 
@@ -50,6 +51,10 @@ export const router = createBrowserRouter([
         path: '/dashboard',
         element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
         children: [
+          {
+            path: '/dashboard',
+            element: <UserProfile></UserProfile>
+          },
           {
             path: '/dashboard/selected-classes',
             element: <SelectedClasses></SelectedClasses>
