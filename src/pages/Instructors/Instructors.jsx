@@ -1,9 +1,8 @@
+import InstructorCard from "../../components/Card/InstructorCard";
 
 const Instructors = () => {
     return (
-        <div>
-            this instructors
-        </div>
+     <InstructorCard></InstructorCard>      
     );
 };
 

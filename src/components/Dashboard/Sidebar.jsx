@@ -5,6 +5,7 @@ import { GrLogout } from 'react-icons/gr'
 import { FcSettings } from 'react-icons/fc'
 import { AiOutlineBars } from 'react-icons/ai'
 import { FaBars, FaBook, FaBookReader, FaBookmark, FaDoorClosed, FaEdit, FaRegPlusSquare, FaSignOutAlt, FaTimes, FaUser, FaUserEdit } from 'react-icons/fa'
+import ThemeToggler from '../Utilities/ThemeToggler'
 // import GuestMenu from './GuestMenu'
 // import HostMenu from './HostMenu'
 const Sidebar = () => {
@@ -54,9 +55,10 @@ const Sidebar = () => {
                 <div>
                     {/* Branding & Profile Info */}
                     <div>
-                        <div className='w-full flex py-2 justify-center items-center bg-neutral mx-auto'>
+                        <div className='w-full flex py-2 justify-between items-center bg-neutral mx-auto'>
                             {/* <img src="" alt="logo" />  */}
-                            <Link to='/' className='text-2xl font-semibold'>Reelify</Link>
+                            <Link to='/' className='text-2xl font-semibold ml-8'>Reelify</Link>
+                            <ThemeToggler></ThemeToggler>
                         </div>
                         <div className='flex flex-col items-center mt-6 -mx-2'>
                             <Link to='/dashboard'>

@@ -26,3 +26,5 @@ export const getRole = async (email) => {
     console.log(user)
     return user?.role || 'user'
 }
+
+// get all instructors by role
