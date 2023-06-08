@@ -3,7 +3,7 @@ const Footer = () => {
     return (
         <footer
         aria-label="Site Footer"
-        className="bg-[#1d1d20] lg:grid lg:grid-cols-5"
+        className="bg-neutral lg:grid lg:grid-cols-5"
       >
         <div className="relative hidden lg:block h-32 lg:col-span-2 lg:h-full ">
           <img
@@ -16,17 +16,17 @@ const Footer = () => {
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
             <div>
               <p>
-                <span className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
+                <span className="text-xs tracking-wide  uppercase">
                   Call us
                 </span>
                 <a
                   href="#"
-                  className="block text-2xl font-medium text-gray-900 hover:opacity-75 dark:text-white sm:text-3xl"
+                  className="block text-2xl font-medium  hover:opacity-75  sm:text-3xl"
                 >
                   0123456789
                 </a>
               </p>
-              <ul className="mt-8 space-y-1 text-sm text-gray-700 dark:text-gray-200">
+              <ul className="mt-8 space-y-1 text-sm">
                 <li>Monday to Friday: 10am - 5pm</li>
                 <li>Weekend: 10am - 3pm</li>
               </ul>
@@ -36,7 +36,7 @@ const Footer = () => {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                    className="transition hover:opacity-75"
                   >
                     <span className="sr-only">Facebook</span>
                     <svg
@@ -58,7 +58,7 @@ const Footer = () => {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                    className="transition hover:opacity-75 "
                   >
                     <span className="sr-only">Instagram</span>
                     <svg
@@ -80,7 +80,7 @@ const Footer = () => {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                    className=" transition hover:opacity-75 "
                   >
                     <span className="sr-only">Twitter</span>
                     <svg
@@ -98,7 +98,7 @@ const Footer = () => {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                    className="transition hover:opacity-75"
                   >
                     <span className="sr-only">GitHub</span>
                     <svg
@@ -120,7 +120,7 @@ const Footer = () => {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                    className="transition hover:opacity-75 "
                   >
                     <span className="sr-only">Dribbble</span>
                     <svg
@@ -141,13 +141,13 @@ const Footer = () => {
             </div>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div>
-                <p className="font-medium text-gray-900 dark:text-white">Services</p>
+                <p className="font-medium">Services</p>
                 <nav aria-label="Footer Navigation - Services" className="mt-6">
                   <ul className="space-y-4 text-sm">
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className="transition hover:opacity-75 "
                       >
                         Wev development
                       </a>
@@ -155,7 +155,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className="transition hover:opacity-75"
                       >
                         Web Design
                       </a>
@@ -163,7 +163,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className=" transition hover:opacity-75 "
                       >
                       Software Development
                       </a>
@@ -171,7 +171,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className="transition hover:opacity-75 "
                       >
                          1on1 Consulting
                       </a>
@@ -179,7 +179,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className=" transition hover:opacity-75 "
                       >
                         SEO Optimisation
                       </a>
@@ -188,13 +188,13 @@ const Footer = () => {
                 </nav>
               </div>
               <div>
-                <p className="font-medium text-gray-900 dark:text-white">Company</p>
+                <p className="font-medium ">Company</p>
                 <nav aria-label="Footer Navigation - Company" className="mt-6">
                   <ul className="space-y-4 text-sm">
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className=" transition hover:opacity-75"
                       >
                         About
                       </a>
@@ -202,7 +202,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className=" transition hover:opacity-75 "
                       >
                         Meet the Team
                       </a>
@@ -210,7 +210,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className=" transition hover:opacity-75 "
                       >
                         Policies
                       </a>
@@ -221,14 +221,14 @@ const Footer = () => {
             </div>
           </div>
           {/* last right */}
-          <div className="pt-12 mt-12 border-t border-gray-100 dark:border-gray-800">
+          <div className="pt-12 mt-12 border-t border-accent/50">
             <div className="sm:flex sm:items-center sm:justify-between">
               <nav aria-label="Footer Navigation - Support">
                 <ul className="flex flex-wrap gap-4 text-xs">
                   <li>
                     <a
                       href="#"
-                      className="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
+                      className="transition hover:opacity-75 "
                     >
                       Terms &amp; Conditions
                     </a>
@@ -236,7 +236,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
+                      className=" transition hover:opacity-75 "
                     >
                       Privacy Policy
                     </a>
@@ -244,14 +244,14 @@ const Footer = () => {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
+                      className="transition hover:opacity-75 "
                     >
                       Cookies
                     </a>
                   </li>
                 </ul>
               </nav>
-              <p className="mt-8 text-xs text-gray-500 dark:text-gray-400 sm:mt-0">
+              <p className="mt-8 text-xs   sm:mt-0">
                 © 2022. Web Dev. All rights reserved.
               </p>
             </div>

@@ -1,6 +1,7 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { Link } from 'react-router-dom';
 //TODO: Add images to the slider
 
 const Banner = () => {
@@ -25,12 +26,12 @@ const Banner = () => {
                         <p className="lg:text-lg my-4 ml-40">Uncover a diverse selection of car toys designed to kids of all age</p>
                         <div className="lg:mt-8  flex justify-center gap-4">
                          
-                            <a
+                            <Link
                                 className="whitespace-nowrap rounded border border-success px-4 py-2  lg:px-12 lg:py-3 text-sm font-medium text-white hover:bg-success hover:text-black transition-all duration-300 focus:outline-none focus:ring active:bg-orange-500 sm:w-auto ml-40"
                                 href="/about"
                             >
                                 Learn More
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
