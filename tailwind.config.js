@@ -15,7 +15,7 @@ export default {
         light: {
           "primary": "#29a876",
           "secondary": "#3B82F6",
-          "accent": "#A855F7",
+          "accent": "#12181B",
           "neutral": "#faf9fb", 
           "base-100": "#f2f2f3",
           "info": "#2775C3",
@@ -26,7 +26,7 @@ export default {
         dark: {
           "primary": "#29a876",
           "secondary": "#3B82F6",
-          "accent": "#A855F7",
+          "accent": "#f2f2f3",
           "neutral": "#1D2025", 
           "base-100": "#12181B",
           "info": "#2775C3",

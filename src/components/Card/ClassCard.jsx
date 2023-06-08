@@ -6,7 +6,7 @@ const ClassCard = ({singleClass}) => {
     const {name, photo, instructor, email, seats, price, createdAt} = singleClass
   
     return (
-        <div className={`overflow-hidden ${seats === 0 ? 'bg-red-200' : 'bg-neutral' } rounded`}>
+        <div className={`overflow-hidden ${seats === 0 ? 'bg-red-500/50' : 'bg-neutral' } rounded`}>
         <img
           src={photo}
           className="object-cover w-full h-64"
@@ -32,7 +32,7 @@ const ClassCard = ({singleClass}) => {
            {name}
           </p>
           <p className="mb-2 ">Instructor name : {instructor}</p>
-         <div className='text-red-600 dark:text-green-500'>
+         <div className='text-accent'>
          <p className="mb-2 ">Available Seats : {seats}</p>
          <p className="mb-2 ">Price : {price}</p>
          </div>

@@ -1,8 +1,10 @@
 import { FaArrowRight } from "react-icons/fa";
 
-const InstructorCard = () => {
+const InstructorCard = ({instructor}) => {
+    console.log(instructor)
+    const { name,email,photo} = instructor
     return (
-        <div className="container mx-auto max-w-sm rounded-lg overflow-hidden shadow-lg my-2 bg-white">
+        <div className="container mx-auto max-w-sm rounded-lg overflow-hidden shadow-lg my-2 bg-neutral">
         <div
           className="relative z-10"
           style={{
@@ -11,7 +13,7 @@ const InstructorCard = () => {
         >
           <img
             className="w-full"
-            src="https://randomuser.me/api/portraits/women/40.jpg"
+            src={instructor?.photo}
             alt="Profile image"
           />
           <div className="text-center absolute w-full" style={{ bottom: "4rem" }}>
@@ -26,10 +28,10 @@ const InstructorCard = () => {
               INSTRUCTOR
           </p>
           <button className="p-4 bg-red-600 rounded-full hover:bg-red-500 focus:bg-red-700 transition ease-in duration-200 focus:outline-none">
-            <FaArrowRight></FaArrowRight>
+            <FaArrowRight className="text-white"></FaArrowRight>
           </button>
         </div>
-        <div className="pt-6 pb-8 text-gray-600 pl-7 space-y-2">
+        <div className="pt-6 pb-8 text-accent pl-7 space-y-2">
           <p>Fullstack Developer </p>
           <p>Fullstack Developer </p>
           <p>Fullstack Developer </p>

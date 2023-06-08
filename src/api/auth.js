@@ -3,7 +3,10 @@
 export const saveUser = (user) => {
     const currentUser = {
 
-            email: user.email
+            email: user.email,
+            name: user.displayName,
+            photo: user.photoURL
+            
         // more user details goes here
         // ===========================
 
@@ -28,3 +31,9 @@ export const getRole = async (email) => {
 }
 
 // get all instructors by role
+// export const getAllInstructors = async () => {
+//     const response = await fetch(`${import.meta.env.VITE_API_URL}/instructors`)
+//     const instructors = await response.json()
+//     console.log(instructors)
+//     return instructors
+// }
