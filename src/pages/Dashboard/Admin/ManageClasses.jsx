@@ -5,7 +5,7 @@ import ClassRow from "./ClassRow";
 
 const ManageClasses = () => {
     const {user, loading} = useContext(AuthContext)
-    const {data: classes=[]} = useQuery({
+    const {data: classes=[], refetch} = useQuery({
     queryKey: ['allclasses', user],
     enabled: !loading,
     queryFn: async () => {
@@ -39,6 +39,7 @@ const ManageClasses = () => {
                     key={singleClass._id}
                     index={index}
                     singleClass={singleClass}
+                    refetch={refetch}
                     ></ClassRow>)
                 }
                
