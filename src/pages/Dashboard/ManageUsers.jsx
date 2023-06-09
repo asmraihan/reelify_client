@@ -10,12 +10,12 @@ const ManageUsers = () => {
     queryKey: ['allusers', user],
     enabled: !loading,
     queryFn: async () => {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/allusers`)
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/admin/allusers/${user?.email}`)
         const data = await res.json()
         return data
     }
     })
-console.log(users)
+// console.log(users)
 
     return (
         <div className="overflow-x-auto">
@@ -24,53 +24,47 @@ console.log(users)
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Class Name</th>
-                    <th>Instructor</th>
-                    <th>Available Seats</th>
-                    <th>Price</th>
-                    <th>Status</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
+                    <th>Name</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                   
+                   
+                  
                 </tr>
             </thead>
             <tbody>
                 {/* row 1 */}
-                <tr>
-                    <th>
-                        1
-                    </th>
-                    <td>
-                        <div className="flex items-center space-x-3">
-                            <div className="avatar">
-                                <div className="mask mask-squircle w-12 h-12">
-                                    <img src="/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component" />
-                                </div>
-                            </div>
-                            <div>
-                                <div className="font-bold">Hart Hagerty</div>
-                            
+              {
+                users.map((singleUser, index)=> <tr key={singleUser._id}>
+                <th>
+                    {index+1}
+                </th>
+                <td>
+                    <div className="flex items-center space-x-3">
+                        <div className="avatar">
+                            <div className="mask mask-squircle w-12 h-12">
+                                <img src={singleUser?.photo} alt="Avatar Tailwind CSS Component" />
                             </div>
                         </div>
-                    </td>
-                    <td>
-                        Zemlak, Daniel and Leannon
-                        <br />
-                        <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
-                    </td>
-                    <td>50</td>
-                    <td>$300</td>
-                    <td>approved</td>
-                    <td>
-                        <button className="btn btn-ghost bg-primary text-white btn-xs">Approve</button>
-                    </td>
-                    <td>
-                        <button className="btn btn-ghost bg-error text-white btn-xs">Deny</button>
-                    </td>
-                    <td>
-                        <button className="btn btn-ghost bg-error text-white btn-xs">Feedback</button>
-                    </td>
-                </tr>
+                   
+                    </div>
+                </td>
+                <td>
+                {singleUser?.name}
+                </td>
+                <td>  {singleUser?.email}</td>
+                <td>  {singleUser?.role || 'student'}</td>
+          
+                <td>
+                    <button className="btn bg-primary text-white btn-xs">Make Instructor</button>
+                </td>
+                <td>
+                    <button className="btn bg-warning text-white btn-xs">Make Admin</button>
+                </td>
+               
+            </tr>)
+              }
            
             </tbody>
           
