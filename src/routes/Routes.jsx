@@ -7,14 +7,15 @@ import ErrorPage from '../pages/ErrorPage/ErrorPage'
 import Login from '../pages/Login/Login'
 import SignUp from '../pages/Signup/Signup'
 import PrivateRoute from './PrivateRoute'
-import SelectedClasses from '../pages/Dashboard/SelectedClasses'
-import EnrolledClasses from '../pages/Dashboard/EnrolledClasses'
+import SelectedClasses from '../pages/Dashboard/User/SelectedClasses'
+import EnrolledClasses from '../pages/Dashboard/User/EnrolledClasses'
 import DashboardLayout from '../layouts/DashboardLayout'
-import MyClasses from '../pages/Dashboard/MyClasses'
-import AddClasses from '../pages/Dashboard/AddClasses'
-import ManageUsers from '../pages/Dashboard/ManageUsers'
-import ManageClasses from '../pages/Dashboard/ManageClasses'
+import MyClasses from '../pages/Dashboard/Instructor/MyClasses'
+import AddClasses from '../pages/Dashboard/Instructor/AddClasses'
+import ManageUsers from '../pages/Dashboard/Admin/ManageUsers'
+import ManageClasses from '../pages/Dashboard/Admin/ManageClasses'
 import UserProfile from '../pages/Dashboard/UserProfile'
+
 
 
 
@@ -57,11 +58,11 @@ export const router = createBrowserRouter([
           },
           {
             path: '/dashboard/selected-classes',
-            element: <SelectedClasses></SelectedClasses>
+            element: <PrivateRoute><SelectedClasses></SelectedClasses></PrivateRoute>
           },
           {
             path: '/dashboard/enrolled-classes',
-            element: <EnrolledClasses></EnrolledClasses>
+            element: <PrivateRoute><EnrolledClasses></EnrolledClasses></PrivateRoute>
           },
           
           {

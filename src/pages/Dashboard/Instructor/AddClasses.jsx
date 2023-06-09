@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { AuthContext } from "../../providers/AuthProvider";
-import { imageUpload } from "../../api/utils";
-import { addClass } from "../../api/classes";
+import { AuthContext } from "../../../providers/AuthProvider";
+import { imageUpload } from "../../../api/utils";
+import { addClass } from "../../../api/classes";
 
 
 const AddClasses = () => {
