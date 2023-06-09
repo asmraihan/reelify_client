@@ -1,71 +1,150 @@
 
 const Playback = () => {
     return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-      <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-        <div>
-          <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-            Brand new
-          </p>
-        </div>
-        <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-          <span className="relative inline-block">
+     <section className="bg-white dark:bg-gray-900">
+  <div className="container px-6 py-10 mx-auto">
+    <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
+      explore our <br /> awesome{" "}
+      <span className="text-blue-500">Components</span>
+    </h1>
+    <iframe
+      className="min-w-full mt-12 h-64 md:h-[450px] rounded-xl overflow-hidden"
+      src="https://vimeo.com/showcase/7060635/video/525707984/embed"
+      frameBorder={0}
+      allow="autoplay; fullscreen"
+      allowFullScreen=""
+    />
+    <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2">
+      <div className="p-6 border rounded-xl border-r-gray-200 dark:border-gray-700">
+        <div className="md:flex md:items-start md:-mx-4">
+          <span className="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:text-white dark:bg-blue-500">
             <svg
-              viewBox="0 0 52 24"
-              fill="currentColor"
-              className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              <defs>
-                <pattern
-                  id="679d5905-e08c-4b91-a66c-84aefbb9d2f5"
-                  x="0"
-                  y="0"
-                  width=".135"
-                  height=".30"
-                >
-                  <circle cx="1" cy="1" r=".7" />
-                </pattern>
-              </defs>
-              <rect
-                fill="url(#679d5905-e08c-4b91-a66c-84aefbb9d2f5)"
-                width="52"
-                height="24"
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
               />
             </svg>
-            <span className="relative">The</span>
-          </span>{' '}
-          quick, brown fox jumps over a lazy dog
-        </h2>
-        <p className="text-base text-gray-700 md:text-lg">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque rem aperiam, eaque ipsa quae.
-        </p>
+          </span>
+          <div className="mt-4 md:mx-4 md:mt-0">
+            <h1 className="text-xl font-medium text-gray-700 capitalize dark:text-white">
+              Copy &amp; paste components
+            </h1>
+            <p className="mt-3 text-gray-500 dark:text-gray-300">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+              ab nulla quod dignissimos vel non corrupti doloribus voluptatum
+              eveniet
+            </p>
+          </div>
+        </div>
       </div>
-      <div className="mx-auto lg:max-w-2xl">
-        <div className="relative w-full transition-shadow duration-300 hover:shadow-xl">
-          <img
-            className="object-cover w-full h-56 rounded shadow-lg sm:h-64 md:h-80 lg:h-96"
-            src="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
-            alt=""
-          />
-          <a
-            href="https://www.youtube.com/embed/Z38USJaSvJM"
-            aria-label="Play Video"
-            className="absolute inset-0 flex items-center justify-center w-full h-full transition-colors duration-300 bg-gray-900 bg-opacity-50 group hover:bg-opacity-25"
-          >
-            <div className="flex items-center justify-center w-16 h-16 transition duration-300 transform bg-gray-100 rounded-full shadow-2xl group-hover:scale-110">
-              <svg
-                className="w-10 text-gray-900"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M16.53,11.152l-8-5C8.221,5.958,7.833,5.949,7.515,6.125C7.197,6.302,7,6.636,7,7v10 c0,0.364,0.197,0.698,0.515,0.875C7.667,17.958,7.833,18,8,18c0.184,0,0.368-0.051,0.53-0.152l8-5C16.822,12.665,17,12.345,17,12 S16.822,11.335,16.53,11.152z" />
-              </svg>
-            </div>
-          </a>
+      <div className="p-6 border rounded-xl border-r-gray-200 dark:border-gray-700">
+        <div className="md:flex md:items-start md:-mx-4">
+          <span className="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:text-white dark:bg-blue-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+              />
+            </svg>
+          </span>
+          <div className="mt-4 md:mx-4 md:mt-0">
+            <h1 className="text-xl font-medium text-gray-700 capitalize dark:text-white">
+              Zero Configuration
+            </h1>
+            <p className="mt-3 text-gray-500 dark:text-gray-300">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+              ab nulla quod dignissimos vel non corrupti doloribus voluptatum
+              eveniet
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="p-6 border rounded-xl border-r-gray-200 dark:border-gray-700">
+        <div className="md:flex md:items-start md:-mx-4">
+          <span className="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:text-white dark:bg-blue-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"
+              />
+            </svg>
+          </span>
+          <div className="mt-4 md:mx-4 md:mt-0">
+            <h1 className="text-xl font-medium text-gray-700 capitalize dark:text-white">
+              elegant Dark Mode
+            </h1>
+            <p className="mt-3 text-gray-500 dark:text-gray-300">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+              ab nulla quod dignissimos vel non corrupti doloribus voluptatum
+              eveniet
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="p-6 border rounded-xl border-r-gray-200 dark:border-gray-700">
+        <div className="md:flex md:items-start md:-mx-4">
+          <span className="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:text-white dark:bg-blue-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+              />
+            </svg>
+          </span>
+          <div className="mt-4 md:mx-4 md:mt-0">
+            <h1 className="text-xl font-medium text-gray-700 capitalize dark:text-white">
+              Simple &amp; clean designs
+            </h1>
+            <p className="mt-3 text-gray-500 dark:text-gray-300">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+              ab nulla quod dignissimos vel non corrupti doloribus voluptatum
+              eveniet
+            </p>
+          </div>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
     );
 };
 
