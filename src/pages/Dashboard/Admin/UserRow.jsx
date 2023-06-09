@@ -79,10 +79,10 @@ const UserRow = ({ singleUser, index,refetch }) => {
             <td>  {singleUser?.role || 'student'}</td>
 
             <td>
-                <button onClick={() => handleMakeInstructor(singleUser)} className={`btn ${userRole === 'instructor' ? 'btn-disabled bg-base-300' : 'bg-primary'}  text-accent btn-xs`}>Make Instructor</button>
+                <button onClick={() => handleMakeInstructor(singleUser)} className={`btn ${userRole === 'instructor' ? 'btn-disabled bg-accent/20' : 'bg-primary'}  text-accent btn-xs`}>Make Instructor</button>
             </td>
             <td>
-                <button onClick={() => handleMakeAdmin(singleUser)} className={`btn ${userRole === 'admin' ? 'btn-disabled bg-base-300' : 'bg-warning'}  text-accent btn-xs`}>Make Admin</button>
+                <button onClick={() => handleMakeAdmin(singleUser)} className={`btn ${userRole === 'admin' ? 'btn-disabled bg-accent/20' : 'bg-warning'}  text-accent btn-xs`}>Make Admin</button>
             </td>
 
         </tr>

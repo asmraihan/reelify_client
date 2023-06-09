@@ -2,11 +2,11 @@ import React from 'react';
 
 const Contact = () => {
     return (
-        <section className="bg-white dark:bg-gray-900">
+        <section className="bg-base-100 dark:bg-gray-900">
         <div className="container px-6 py-12 mx-auto">
           <div>
             <p className="font-medium text-blue-500 dark:text-blue-400">Contact us</p>
-            <h1 className="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl dark:text-white">
+            <h1 className="mt-2 text-2xl font-semibold text-accent md:text-3xl dark:text-white">
               Get in touch
             </h1>
             <p className="mt-3 text-gray-500 dark:text-gray-400">
@@ -16,7 +16,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 gap-12 mt-10 lg:grid-cols-3">
             <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-1">
               <div>
-                <span className="inline-block p-3 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
+                <span className="inline-block p-3 text-blue-500 rounded-full bg-info/20">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -32,7 +32,7 @@ const Contact = () => {
                     />
                   </svg>
                 </span>
-                <h2 className="mt-4 text-base font-medium text-gray-800 dark:text-white">
+                <h2 className="mt-4 text-base font-medium text-accent">
                   Email
                 </h2>
                 <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
@@ -43,7 +43,7 @@ const Contact = () => {
                 </p>
               </div>
               <div>
-                <span className="inline-block p-3 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
+                <span className="inline-block p-3 text-blue-500 rounded-full bg-info/20">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -64,7 +64,7 @@ const Contact = () => {
                     />
                   </svg>
                 </span>
-                <h2 className="mt-4 text-base font-medium text-gray-800 dark:text-white">
+                <h2 className="mt-4 text-base font-medium text-accent">
                   Office
                 </h2>
                 <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
@@ -81,7 +81,7 @@ const Contact = () => {
                 width="100%"
                 height="100%"
                 title="map"              
-                src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=8QVR+P2W,%20Halishahar%20Rd,%20Chattogram+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               />
             </div>
           </div>

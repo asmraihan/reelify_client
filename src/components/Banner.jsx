@@ -21,7 +21,7 @@ const Banner = () => {
             <Slider {...sliderSettings}>
             <div className="relative">
                     <img className='w-full mx-auto object-cover h-[calc(50vh)] lg:h-auto' src='https://i.ibb.co/GCSPB2P/carbanner2.jpg' alt="Car Toy 1" />
-                    <div className="bg-black/80 w-full h-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white flex flex-col justify-center items-start p-10 ">
+                    <div className="bg-black/60 w-full h-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white flex flex-col justify-center items-start p-10 ">
                         <h1 className="text-2xl lg:text-4xl font-bold lg:mb-4 ml-40">Welcome to AutoSport</h1>
                         <p className="lg:text-lg my-4 ml-40">Uncover a diverse selection of car toys designed to kids of all age</p>
                         <div className="lg:mt-8  flex justify-center gap-4">

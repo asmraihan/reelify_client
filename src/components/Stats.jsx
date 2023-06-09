@@ -7,7 +7,7 @@ const Stats = () => {
           <div className="grid gap-8 lg:col-span-2">
             <div>
               <p className="mb-2 text-lg font-bold">Old man</p>
-              <p className="text-gray-700">
+              <p className="text-accent/70">
                 An old man lived in the village. He was one of the most
                 unfortunate people in the world. The whole village was tired of
                 him, he was always gloomy, he constantly complained.
@@ -15,17 +15,17 @@ const Stats = () => {
             </div>
             <div>
               <p className="mb-2 text-lg font-bold">The Wise Man</p>
-              <p className="text-gray-700">
+              <p className="text-accent/70">
                 People have been coming to the wise man, complaining about the
                 same problems every time. One day he told them a joke and everyone
                 roared in laughter.
               </p>
             </div>
           </div>
-          <div className="grid border divide-y rounded lg:col-span-3 sm:grid-cols-2 sm:divide-y-0 sm:divide-x">
+          <div className="grid border border-accent/50 divide-y divide-accent/50 rounded lg:col-span-3 sm:grid-cols-2 sm:divide-y-0 sm:divide-x">
             <div className="flex flex-col justify-between p-10">
               <div>
-                <p className="text-lg font-semibold text-gray-800 sm:text-base">
+                <p className="text-lg font-semibold text-info/90 sm:text-base">
                   Funds Raised
                 </p>
                 <p className="text-2xl font-bold text-deep-purple-accent-400 sm:text-xl">
@@ -33,7 +33,7 @@ const Stats = () => {
                 </p>
               </div>
               <div>
-                <p className="text-lg font-semibold text-gray-800 sm:text-base">
+                <p className="text-lg font-semibold text-info/90  sm:text-base">
                   Products
                 </p>
                 <p className="text-2xl font-bold text-deep-purple-accent-400 sm:text-xl">
@@ -41,7 +41,7 @@ const Stats = () => {
                 </p>
               </div>
               <div>
-                <p className="text-lg font-semibold text-gray-800 sm:text-base">
+                <p className="text-lg font-semibold text-info/90  sm:text-base">
                   Downloads
                 </p>
                 <p className="text-2xl font-bold text-deep-purple-accent-400 sm:text-xl">
@@ -51,7 +51,7 @@ const Stats = () => {
             </div>
             <div className="flex flex-col justify-between p-10">
               <div>
-                <p className="text-lg font-semibold text-gray-800 sm:text-base">
+                <p className="text-lg font-semibold text-info/90  sm:text-base">
                   Users
                 </p>
                 <p className="text-2xl font-bold text-deep-purple-accent-400 sm:text-xl">
@@ -59,7 +59,7 @@ const Stats = () => {
                 </p>
               </div>
               <div>
-                <p className="text-lg font-semibold text-gray-800 sm:text-base">
+                <p className="text-lg font-semibold text-info/90  sm:text-base">
                   Installations
                 </p>
                 <p className="text-2xl font-bold text-deep-purple-accent-400 sm:text-xl">
@@ -67,7 +67,7 @@ const Stats = () => {
                 </p>
               </div>
               <div>
-                <p className="text-lg font-semibold text-gray-800 sm:text-base">
+                <p className="text-lg font-semibold text-info/90 sm:text-base">
                   Subscribers
                 </p>
                 <p className="text-2xl font-bold text-deep-purple-accent-400 sm:text-xl">

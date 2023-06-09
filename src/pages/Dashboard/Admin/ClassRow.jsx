@@ -89,13 +89,13 @@ const ClassRow = ({ singleClass, index, refetch }) => {
             <td>${singleClass?.price}</td>
             <td className="">{singleClass?.status}</td>
             <td>
-                <button onClick={() => handleApproved(singleClass)} className={`btn ${singleClass.status !== 'pending' ? 'btn-disabled bg-base-300' : ''} bg-primary text-white btn-xs`}>Approve</button>
+                <button onClick={() => handleApproved(singleClass)} className={`btn ${singleClass.status !== 'pending' ? 'btn-disabled bg-accent/20' : 'bg-primary'}  text-accent btn-xs`}>Approve</button>
             </td>
             <td>
-                <button onClick={() => handleDenied(singleClass)} className={`btn ${singleClass.status !== 'pending' ? 'btn-disabled bg-base-300' : ''} bg-error text-white btn-xs`}>Deny</button>
+                <button onClick={() => handleDenied(singleClass)} className={`btn ${singleClass.status !== 'pending' ? 'btn-disabled bg-accent/20' : 'bg-error'}  text-accent btn-xs`}>Deny</button>
             </td>
             <td>
-                <label htmlFor={`my_modal_${singleClass._id}`} className="btn bg-info text-white btn-xs">Feedback</label>    
+                <label htmlFor={`my_modal_${singleClass._id}`} className="btn bg-info text-accent btn-xs">Feedback</label>    
             </td>
             {/* modals starts */}
             <input type="checkbox" id={`my_modal_${singleClass._id}`} className="modal-toggle" />
