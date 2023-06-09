@@ -36,13 +36,13 @@ const NavBar = () => {
             to='/dashboard'>{user ? <Link
                 onClick={handleLogOut}
                 className='inline-flex justify-center items-center py-2 px-5 font-medium text-center text-white 
-                btn btn-sm btn-error hover:bg-error/80 normal-case '
+                btn btn-sm rounded-md btn-error hover:bg-error/80 normal-case '
             >
                 Logout
             </Link> :
                 <Link
                     to='/login'
-                    className='inline-flex justify-center items-center py-2 px-5 font-medium text-center text-white btn btn-sm btn-primary normal-case ml-4'
+                    className='inline-flex justify-center items-center py-2 px-5 font-medium text-center text-white btn btn-sm rounded-md btn-primary normal-case ml-4'
                 >
                     Login
                 </Link>}</div>

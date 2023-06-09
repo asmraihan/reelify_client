@@ -18,11 +18,11 @@ const Home = () => {
           <Parallax></Parallax>
           <PopularClass></PopularClass>
           <PopularInstructor></PopularInstructor>
-          <Playback></Playback>
-          <Pricing></Pricing>
           <Test></Test>
+          {/* <Playback></Playback> */}
           <Test2></Test2>
-          <Test3></Test3>
+          <Pricing></Pricing>
+          {/* <Test3></Test3> */}
           <Stats></Stats>
           <Contact></Contact>
         </div>

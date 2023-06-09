@@ -6,7 +6,7 @@ const Test = () => {
         <div className="grid gap-10 lg:grid-cols-2">
           <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
             <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-teal-accent-400">
-              <svg className="text-teal-900 w-7 h-7" viewBox="0 0 24 24">
+              <svg className="text-accent w-7 h-7" viewBox="0 0 24 24">
                 <polyline
                   fill="none"
                   stroke="currentColor"
@@ -49,7 +49,7 @@ const Test = () => {
               </svg>
             </div>
             <div className="max-w-xl mb-6">
-              <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+              <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-accent sm:text-4xl sm:leading-none">
                 Let us handle
                 <br className="hidden md:block" />
                 your next{' '}
@@ -57,7 +57,7 @@ const Test = () => {
                   destination
                 </span>
               </h2>
-              <p className="text-base text-gray-700 md:text-lg">
+              <p className="text-base text-accent/70 md:text-lg">
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
                 quae. explicabo.
@@ -67,7 +67,7 @@ const Test = () => {
               <a
                 href="/"
                 aria-label=""
-                className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                className="inline-flex items-center font-semibold transition-all duration-500 hover:underline underline-offset-4 hover:text-accent"
               >
                 Learn more
                 <svg

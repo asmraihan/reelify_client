@@ -43,7 +43,7 @@ const SignUp = () => {
         />
         <div className="relative bg-opacity-75 bg-emerald-700">
           <svg
-            className="absolute inset-x-0 bottom-0 text-white"
+            className="absolute inset-x-0 -bottom-1 text-base-100"
             viewBox="0 0 1160 163"
           >
             <path
@@ -55,7 +55,7 @@ const SignUp = () => {
             <div className="flex flex-col items-center justify-between xl:flex-row">
             
               <div className="w-full max-w-xl xl:px-8 xl:w-5/12">
-                <div className="bg-white rounded shadow-2xl p-7 sm:p-10">
+                <div className="bg-neutral rounded shadow-2xl p-7 sm:p-10">
                   <h3 className="mb-4 text-xl font-semibold sm:text-center sm:mb-6 sm:text-2xl">
                     Sign up for updates
                   </h3>
@@ -70,7 +70,7 @@ const SignUp = () => {
                       <input
                         placeholder="Your Name"
                         type="text"
-                        className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                        className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-base-100/80 border border-accent/50 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
                         id="firstName"
                         name="name"
                         {...register("name", { required: true })} 
@@ -88,7 +88,7 @@ const SignUp = () => {
                       <input
                         placeholder="Your Email Address"
                         type="text"
-                        className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                        className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-base-100/80 border  border-accent/50 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
                         id="email"
                         name="email"
                         {...register("email", { required: true })} 
@@ -106,7 +106,7 @@ const SignUp = () => {
                       <input
                         placeholder="**********"
                         type="password"
-                        className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                        className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-base-100/80 border  border-accent/50 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
                         id="password"
                         name="password"
                         {...register("password",{ required: true, minLength: 6 ,
@@ -127,7 +127,7 @@ const SignUp = () => {
                       <input
                         placeholder="**********"
                         type="password"
-                        className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                        className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-base-100/80 border  border-accent/50 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
                         id="confirm_password"
                         name="confirm_password"
                         // validate confirm_password
@@ -151,7 +151,7 @@ const SignUp = () => {
                       <input
                         placeholder="Link of PhotoURL"
                         type="text"
-                        className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                        className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-base-100/80 border  border-accent/50 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
                         id="photo"
                         name="photo"
                         {...register("photo")}
@@ -163,12 +163,12 @@ const SignUp = () => {
                       <input
                         type="submit"
                         value="Sign Up"
-                        className="inline-flex cursor-pointer items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-accent hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                        className="inline-flex cursor-pointer items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-accent transition duration-200 rounded shadow-md bg-secondary hover:bg-info focus:shadow-outline focus:outline-none"
                       >
                         
                       </input>
                     </div>
-                    <p className="text-xs text-gray-600 sm:text-sm text-center">
+                    <p className="text-xs text-accent/80 sm:text-sm text-center">
                     Already have an account? <Link to='/login'>Please Login</Link>
                     </p>
                   </form>

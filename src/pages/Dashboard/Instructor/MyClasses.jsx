@@ -41,8 +41,8 @@ const MyClasses = () => {
                             <td>{singleClass?.name}</td>
                             <td>{singleClass?.status}</td>
                             <td>{singleClass?.seats}</td>
-                            <td>{singleClass?.name}</td>
-                            <td>{singleClass?.name}</td>
+                            <td>{singleClass?.students}</td>
+                            <td>{singleClass?.feedback}</td>
                             <td> <button className="btn btn-secondary btn-sm text-accent">Update</button> </td>
                         </tr>)
 

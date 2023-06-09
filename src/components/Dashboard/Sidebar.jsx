@@ -94,12 +94,12 @@ const Sidebar = () => {
                                 role === 'user' && <>
                                 <NavLink to='/dashboard/selected-classes'
                                 className={({ isActive }) =>
-                                    `flex items-center px-4 py-2 mt-5 text transition-colors duration-300 transform hover:text-info hover:bg-gray-300  ${isActive ? 'bg-gray-300  text' : 'text-gray'}`}>
+                                    `flex items-center px-4 py-2 mt-5 text transition-colors duration-300 transform hover:text-info hover:bg-neutral  ${isActive ? 'bg-info/30' : 'text-gray'}`}>
                                 <FaBook className='w-5 h-5'/> <span className='mx-4 font-medium'>My Selected Classes</span>
                             </NavLink>
                             <NavLink to='/dashboard/enrolled-classes'
                                 className={({ isActive }) =>
-                                    `flex items-center px-4 py-2 mt-5 text transition-colors duration-300 transform hover:text-info hover:bg-gray-300  ${isActive ? 'bg-gray-300  text' : 'text-gray'}`}>
+                                    `flex items-center px-4 py-2 mt-5 text transition-colors duration-300 transform hover:text-info hover:bg-neutral  ${isActive ? 'bg-info/30' : 'text-gray'}`}>
                                 <FaBookmark className='w-5 h-5'/> <span className='mx-4 font-medium'>My Enrolled Classes</span>
                             </NavLink>
                                 </>
@@ -109,12 +109,12 @@ const Sidebar = () => {
                                 role === 'instructor' && <>
                                 <NavLink to='/dashboard/my-classes'
                                 className={({ isActive }) =>
-                                    `flex items-center px-4 py-2 mt-5 text transition-colors duration-300 transform hover:text-info hover:bg-gray-300  ${isActive ? 'bg-gray-300  text' : 'text-gray'}`}>
+                                    `flex items-center px-4 py-2 mt-5 text transition-colors duration-300 transform hover:text-info hover:bg-neutral  ${isActive ? 'bg-info/30' : 'text-gray'}`}>
                                 <FaBookReader className='w-5 h-5'/> <span className='mx-4 font-medium'>My Classes</span>
                             </NavLink>
                             <NavLink to='/dashboard/add-classes'
                                 className={({ isActive }) =>
-                                    `flex items-center px-4 py-2 mt-5 text transition-colors duration-300 transform hover:text-info hover:bg-gray-300  ${isActive ? 'bg-gray-300  text' : 'text-gray'}`}>
+                                    `flex items-center px-4 py-2 mt-5 text transition-colors duration-300 transform hover:text-info hover:bg-neutral  ${isActive ? 'bg-info/30' : 'text-gray'}`}>
                                 <FaRegPlusSquare className='w-5 h-5'/> <span className='mx-4 font-medium'>Add Class</span>
                             </NavLink>
                                 </>
@@ -124,12 +124,12 @@ const Sidebar = () => {
                                 role === 'admin' && <>
                                   <NavLink to='/dashboard/manage-users'
                                 className={({ isActive }) =>
-                                    `flex items-center px-4 py-2 mt-5 text transition-colors duration-300 transform hover:text-info hover:bg-gray-300  ${isActive ? 'bg-gray-300  text' : 'text-gray'}`}>
+                                    `flex items-center px-4 py-2 mt-5 text transition-colors duration-300 transform hover:text-info hover:bg-neutral  ${isActive ? 'bg-info/30 ' : 'text-gray'}`}>
                                 <FaUserEdit className='w-5 h-5'/> <span className='mx-4 font-medium'>Manage Users</span>
                             </NavLink>
                                 <NavLink to='/dashboard/manage-classes'
                                 className={({ isActive }) =>
-                                    `flex items-center px-4 py-2 mt-5 text transition-colors duration-300 transform hover:text-info hover:bg-gray-300  ${isActive ? 'bg-gray-300  text' : 'text-gray'}`}>
+                                    `flex items-center px-4 py-2 mt-5 text transition-colors duration-300 transform hover:text-info hover:bg-neutral  ${isActive ? 'bg-info/30' : 'text-gray'}`}>
                                 <FaEdit className='w-5 h-5'/> <span className='mx-4 font-medium'>Manage Classes</span>
                             </NavLink>
                                 </>
@@ -144,21 +144,18 @@ const Sidebar = () => {
                     <NavLink
                         to='/dashboard'
                         className={({ isActive }) =>
-                            `flex items-center px-4 py-2 mt-5  transition-colors duration-300 transform  hover:bg-gray-300   hover:text-gray-700 ${isActive ? 'bg-gray-300  text-gray-700' : 'text-gray-200'
-                            }`
-                        }
-                    >
+                        `flex items-center px-4 py-2 mt-5 text transition-colors duration-300 transform hover:text-accent hover:bg-primary/80  ${isActive ? '' : 'text-gray '}`}>
                         <FaUser className='w-5 h-5' />
 
                         <span className='mx-4 font-medium'>Profile</span>
                     </NavLink>
                     <button
                         onClick={handleLogOut}
-                        className='flex w-full items-center px-4 py-2 mt-5 text-gray-200 hover:bg-red-500 hover:text-gray-100 transition-colors duration-300 transform'
+                        className='flex w-full items-center px-4 py-2 mt-5 text-gray-200 hover:bg-red-500 hover:text-accent transition-colors duration-300 transform'
                     >
-                        <FaSignOutAlt className='w-5 h-5 text-gray-200' />
+                        <FaSignOutAlt className='w-5 h-5 text-accent/90' />
 
-                        <span className='mx-4 font-medium '>Logout</span>
+                        <span className='mx-4 font-medium text-accent/80'>Logout</span>
                     </button>
                 </div>
             </div>
