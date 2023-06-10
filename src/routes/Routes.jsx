@@ -15,6 +15,7 @@ import AddClasses from '../pages/Dashboard/Instructor/AddClasses'
 import ManageUsers from '../pages/Dashboard/Admin/ManageUsers'
 import ManageClasses from '../pages/Dashboard/Admin/ManageClasses'
 import UserProfile from '../pages/Dashboard/UserProfile'
+import PaymentPage from '../pages/Dashboard/User/PaymentPage'
 
 
 
@@ -59,6 +60,11 @@ export const router = createBrowserRouter([
           {
             path: '/dashboard/selected-classes',
             element: <PrivateRoute><SelectedClasses></SelectedClasses></PrivateRoute>
+          },
+          {
+            path: '/dashboard/payment-page/:classId',
+            element: <PaymentPage></PaymentPage>,
+            loader: ({params})=> fetch(`${import.meta.env.VITE_API_URL}/dashboard/payment-page/${params.classId}`)
           },
           {
             path: '/dashboard/enrolled-classes',

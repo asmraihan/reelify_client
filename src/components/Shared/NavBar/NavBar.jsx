@@ -63,7 +63,7 @@ const NavBar = () => {
                         </label>
                     </div>
                     <div className="flex-1 px-2 mx-4 ml-8"><Link className='text-2xl font-semibold'>
-                        <img className='w-14 inline -rotate-90' src="/reelify_logo.png" alt="" />
+                        <img className='w-12 inline -rotate-90' src="/reelify_logo.png" alt="" />
                         <p className='inline underline underline-offset-4'><span>Reel</span>ify</p>
                     </Link>
                     </div>

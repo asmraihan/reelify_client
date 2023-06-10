@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Banner = () => {
     const sliderSettings = {
+        // pauseOnHover: false,
         dots: false,
         infinite: true,
         speed: 1000,

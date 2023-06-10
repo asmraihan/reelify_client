@@ -1,27 +1,46 @@
-import React from 'react';
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
+import { useQuery } from "@tanstack/react-query";
+import SelectedRow from "./SelectedRow";
 
 const SelectedClasses = () => {
+
+  const {user, loading} = useContext(AuthContext)
+
+  const {data: classes=[], refetch} = useQuery({
+    queryKey: ['selected', user],
+    enabled: !loading,
+    queryFn: async () => {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/selected`)
+        const data = await res.json()
+        return data
+    }
+    })
+console.log(classes)
     return (
         <div className="overflow-x-auto">
         <table className="table table-zebra">
           {/* head */}
           <thead>
             <tr>
+              <th>#</th>
               <th></th>
-              <th>Name</th>
-              <th>Job</th>
-              <th>Job</th>   
+              <th>Class</th>
+              <th>Instructor</th>
+              <th>Price</th>   
+              <th>Action</th>   
             </tr>
           </thead>
           <tbody>
             {/* row 1 */}
-
-            <tr>
-              <th>1</th>
-              <td>Cy Ganderton</td>
-              <td>Quality Control Specialist</td>
-              <td>Blue</td>
-            </tr>
+        {
+          classes.map((singleClass, index)=> <SelectedRow
+          key={singleClass._id}
+          index={index}
+          singleClass={singleClass}
+          refetch={refetch}
+          ></SelectedRow>)
+        }
             
           </tbody>
         </table>

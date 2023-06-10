@@ -15,7 +15,7 @@ const ClassCard = ({ singleClass }) => {
   const handleSelect = (singleClass) => {
     console.log(singleClass)
     if (user && user.email) {
-      const selectedClass = { classId: _id, name, instructor, seats, price, email: user.email }
+      const selectedClass = { classId: _id, name, photo, instructor, seats, price, email: user.email }
       fetch(`${import.meta.env.VITE_API_URL}/selected`,{
         method: 'POST',
         headers: {
