@@ -5,6 +5,7 @@ import PopularClass from "../../components/PopularClass";
 import PopularInstructor from "../../components/PopularInstructor";
 import Pricing from "../../components/Pricing";
 import Showcase from "../../components/Showcase";
+import Showcase2 from "../../components/Showcase2";
 import Test2 from "../../components/Test2";
 
 
@@ -16,11 +17,9 @@ const Home = () => {
           <PopularInstructor></PopularInstructor>
           <ParallaxCover></ParallaxCover>
           <Showcase></Showcase>
-          {/* <Playback></Playback> */}
+          {/* <Showcase2></Showcase2> */}
           <Test2></Test2>
           <Pricing></Pricing>
-          {/* <Test3></Test3> */}
-          {/* <Stats></Stats> */}
           <Contact></Contact>
         </div>
     );

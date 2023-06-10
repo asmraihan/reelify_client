@@ -18,6 +18,7 @@ import UserProfile from '../pages/Dashboard/UserProfile'
 import PaymentPage from '../pages/Dashboard/User/PaymentPage'
 import AdminRoute from './AdminRoute'
 import InstructorRoute from './InstructorRoute'
+import PaymentHistory from '../pages/Dashboard/User/PaymentHistory'
 
 
 
@@ -71,6 +72,10 @@ export const router = createBrowserRouter([
           {
             path: '/dashboard/enrolled-classes',
             element: <PrivateRoute><EnrolledClasses></EnrolledClasses></PrivateRoute>
+          },
+          {
+            path: '/dashboard/payment-history',
+            element: <PrivateRoute><PaymentHistory></PaymentHistory></PrivateRoute>
           },
           
           {

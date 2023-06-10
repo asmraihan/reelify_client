@@ -21,6 +21,10 @@ const Login = () => {
             toast.success(`Welcome ${loggedUser.email}`)
             navigate(from, {replace: true})
         })
+        .catch(error=>{ /* TODO */
+            toast.error(error.message)
+        }   
+        )
     }
    
     const [showPassword, setShowPassword] = useState(false)
@@ -47,16 +51,14 @@ const Login = () => {
                     <div className="flex flex-col items-center justify-between xl:flex-row">
                         <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
                             <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
-                                The quick, brown fox <br className="hidden md:block" />
-                                jumps over a lazy dog
+                            Camps are filling fast, <br className="hidden md:block" />
+                                 enroll today!
                             </h2>
                             <p className="max-w-xl mb-4 text-base text-gray-200 md:text-lg">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                accusantium doloremque laudan, totam rem aperiam, eaque ipsa
-                                quae.
+                            Week long Spring and Summer camp activities range from production planning, location scouting, hands on tech and gear tutorials, introduction to industry standards, screenwriting, project management, editing and so much more. 
                             </p>
-                            <a
-                                href="/"
+                            <Link
+                                to="/"
                                 aria-label=""
                                 className="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-white hover:text-blue-500"
                             >
@@ -68,7 +70,7 @@ const Login = () => {
                                 >
                                     <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
                                 </svg>
-                            </a>
+                            </Link>
                         </div>
                         <div className="w-full max-w-xl xl:px-8 xl:w-5/12">
                             <div className="bg-neutral rounded shadow-2xl p-7 sm:p-10">

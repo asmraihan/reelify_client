@@ -30,6 +30,11 @@ const SignUp = () => {
                 console.log(err)
             })
         })
+        .catch(err=>{
+          toast.error(err.message)
+          console.log(err)
+      })
+        
     }
  
 
@@ -176,29 +181,27 @@ const SignUp = () => {
                 </div>
               </div>
               <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
-                <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
-                  The quick, brown fox <br className="hidden md:block" />
-                  jumps over a lazy dog
-                </h2>
-                <p className="max-w-xl mb-4 text-base text-gray-200 md:text-lg">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudan, totam rem aperiam, eaque ipsa
-                  quae.
-                </p>
-                <a
-                  href="/"
-                  aria-label=""
-                  className="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700"
-                >
-                  Learn more
-                  <svg
-                    className="inline-block w-3 ml-2"
-                    fill="currentColor"
-                    viewBox="0 0 12 12"
-                  >
-                    <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
-                  </svg>
-                </a>
+              <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
+                            Camps are filling fast, <br className="hidden md:block" />
+                                 enroll today!
+                            </h2>
+                            <p className="max-w-xl mb-4 text-base text-gray-200 md:text-lg">
+                            Week long Spring and Summer camp activities range from production planning, location scouting, hands on tech and gear tutorials, introduction to industry standards, screenwriting, project management, editing and so much more. 
+                            </p>
+                            <Link
+                                to="/"
+                                aria-label=""
+                                className="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-white hover:text-blue-500"
+                            >
+                                Learn more
+                                <svg
+                                    className="inline-block w-3 ml-2"
+                                    fill="currentColor"
+                                    viewBox="0 0 12 12"
+                                >
+                                    <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
+                                </svg>
+                            </Link>
               </div>
             </div>
           </div>

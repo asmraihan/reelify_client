@@ -1,22 +1,16 @@
 import { useContext, useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../providers/AuthProvider'
-import { GrLogout } from 'react-icons/gr'
-import { FcSettings } from 'react-icons/fc'
-import { AiOutlineBars } from 'react-icons/ai'
-import { FaBars, FaBook, FaBookReader, FaBookmark, FaDoorClosed, FaEdit, FaRegPlusSquare, FaSignOutAlt, FaTimes, FaUser, FaUserEdit } from 'react-icons/fa'
+import { FaBars, FaBook, FaBookReader, FaBookmark, FaEdit, FaRegPlusSquare, FaSignOutAlt, FaTimes, FaUser, FaUserEdit, FaWallet } from 'react-icons/fa'
 import ThemeToggler from '../Utilities/ThemeToggler'
 // import GuestMenu from './GuestMenu'
 // import HostMenu from './HostMenu'
 const Sidebar = () => {
     const navigate = useNavigate()
-    const [toggle, setToggle] = useState(false)
     const { user, logOut, role } = useContext(AuthContext)
   
     const [isActive, setActive] = useState('false')
-    const toggleHandler = event => {
-        setToggle(event.target.checked)
-    }
+   
     // Sidebar Responsive Handler
     const handleToggle = () => {
         setActive(!isActive)
@@ -61,25 +55,26 @@ const Sidebar = () => {
                             <ThemeToggler></ThemeToggler>
                         </div>
                         <div className='flex flex-col items-center mt-6 -mx-2'>
-                            <Link to='/dashboard'>
+                            <Link className='relative' to='/dashboard'>
                                 <img
                                     className='object-cover w-24 h-24 mx-2 rounded-full'
                                     src={user?.photoURL}
                                     alt='avatar'
                                     referrerPolicy='no-referrer'
                                 />
+                                <div className='badge bg-green-500 rounded-full animate-pulse absolute top-1 right-1'></div>
                             </Link>
                             <Link to='/dashboard'>
-                                <h4 className='mx-2 mt-2 font-medium text-gray-800  hover:underline'>
+                                <h4 className='mx-2 mt-2 font-medium text-accent  hover:underline'>
                                     {user?.displayName}
                                 </h4>
                             </Link>
                             <Link to='/dashboard'>
-                                <p className='mx-2 mt-1 text-sm font-medium text-gray-600  hover:underline'>
+                                <p className='mx-2 mt-1 text-sm font-medium text-accent/70  hover:underline'>
                                     {user?.email}
                                 </p>
                             </Link>
-                            <p className='mx-2 mt-1 text-sm font-medium text-info uppercase'>
+                            <p className='mx-2 mt-4 text-sm font-medium text-info uppercase'>
                                     {role}
                                 </p>
                         </div>
@@ -101,6 +96,11 @@ const Sidebar = () => {
                                 className={({ isActive }) =>
                                     `flex items-center px-4 py-2 mt-5 text transition-colors duration-300 transform hover:text-info hover:bg-neutral  ${isActive ? 'bg-info/30' : 'text-gray'}`}>
                                 <FaBookmark className='w-5 h-5'/> <span className='mx-4 font-medium'>My Enrolled Classes</span>
+                            </NavLink>
+                            <NavLink to='/dashboard/payment-history'
+                                className={({ isActive }) =>
+                                    `flex items-center px-4 py-2 mt-5 text transition-colors duration-300 transform hover:text-info hover:bg-neutral  ${isActive ? 'bg-info/30' : 'text-gray'}`}>
+                                <FaWallet className='w-5 h-5'/> <span className='mx-4 font-medium'>Payment History</span>
                             </NavLink>
                                 </>
                             }
