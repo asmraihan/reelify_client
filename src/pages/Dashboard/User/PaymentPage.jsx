@@ -1,12 +1,14 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const PaymentPage = () => {
-    const data = useLoaderData()
-    console.log(data)
+//   const location = useLocation()
+//   const classData = location.pathname.split('/').pop()
+    const data = useParams()
+    const classData = data.classId
+  console.log(classData)
     return (
         <div>
-            this payment page for 
+            this payment page for : {classData}
         </div>
     );
 };

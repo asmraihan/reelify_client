@@ -62,9 +62,9 @@ export const router = createBrowserRouter([
             element: <PrivateRoute><SelectedClasses></SelectedClasses></PrivateRoute>
           },
           {
-            path: '/dashboard/payment-page/:classId',
+            path : '/dashboard/payment/:classId',
             element: <PaymentPage></PaymentPage>,
-            loader: ({params})=> fetch(`${import.meta.env.VITE_API_URL}/dashboard/payment-page/${params.classId}`)
+            // loader : ({params}) => fetch(`${import.meta.env.VITE_API_URL}/dashboard/payment/${params.classId}`)
           },
           {
             path: '/dashboard/enrolled-classes',

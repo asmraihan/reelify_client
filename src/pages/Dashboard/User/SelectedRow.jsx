@@ -34,9 +34,8 @@ const SelectedRow = ({ singleClass, refetch }) => {
         })
     }
 
-    const handlePayment= (singleClass)=>{
-        console.log(singleClass)
-    }
+
+//   console.log(singleClass.classId)
     return (
         <tr>
             <th>1</th>
@@ -50,7 +49,7 @@ const SelectedRow = ({ singleClass, refetch }) => {
             <td>{singleClass?.name}</td>
             <td>{singleClass?.instructor}</td>
             <td>{singleClass?.price}</td>
-            <td><Link to={`/dashboard/payment-page/${singleClass.classId}`} className={`btn bg-primary text-accent btn-sm`}>Pay</Link></td>
+            <td><Link to={`/dashboard/payment/${singleClass?.classId}`} className={`btn bg-primary text-accent btn-sm`}>Pay</Link></td>
             <td><button onClick={() => handleDelete(singleClass)} className={`btn bg-error text-accent btn-sm`}>Delete</button></td>
         </tr>
     );

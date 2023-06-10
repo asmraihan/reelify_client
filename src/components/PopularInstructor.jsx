@@ -1,83 +1,58 @@
-import React from 'react';
-import ButtonOutlined from './Button/ButtonOutlined';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from "react-icons/fa";
+import { useQuery } from '@tanstack/react-query';
+import { useContext } from 'react';
+import { AuthContext } from '../providers/AuthProvider';
+import {TbMail} from "react-icons/tb";
 const PopularInstructor = () => {
+  const {user, loading} = useContext(AuthContext)
+  const {data: instructors=[]} = useQuery({
+  queryKey: ['instructors', user?.email],
+  enabled: !loading,
+  queryFn: async () => {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/instructors/sort`)
+      const data = await res.json()
+      return data
+  }
+  })
+  // console.log(instructors)
+
     return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-20 lg:py-20">
       <div className="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
       <p className="text-accent/80 lg:text-sm lg:max-w-md">
-          "Sed ut perspiciatis unde omnis iste natus error sit iste voluptatem
-          accusantium doloremque rem aperiam, ipsa eaque quae. Sed ut
-          perspiciatis unde omnis iste."
+          All courses are taught by instructors with both industrial and educational experience to make the content as accessible and engaging for young filmmakers as possible.
         </p>
-        <h2 className="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight text-accent sm:text-4xl sm:leading-none md:mb-6 group">
+        <h2 className="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight text-accent sm:text-4xl sm:leading-none md:mb-6 group text-right">
           <span className="inline-block mb-1 sm:mb-4">
-            The quick, brown fox
+          Professional instructors with 
             <br className="hidden md:block" />
-            jumps over a lazy dog
+            hands-on experience
           </span>
-          <div className="h-1 ml-auto duration-300 origin-left transform bg-deep-purple-accent-400 scale-x-30 group-hover:scale-x-100" />
         </h2>
        
       </div>
-      <div className="grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
-        <a href="/" aria-label="View Item">
-          <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
-            <img
-              className="object-cover w-full h-56 md:h-64 xl:h-80"
-              src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-              alt=""
-            />
-            <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
-              <p className="text-sm font-medium tracking-wide text-white">
-                Sed ut perspiciatis unde omnis iste natus error
-              </p>
-            </div>
+      <div className="grid gap-10 lg:gap-20 row-gap-5 mb-8 lg:grid-cols-3 sm:row-gap-6 sm:grid-cols-2">
+        
+         {
+          instructors.map((instructor)=>  <div key={instructor._id} className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+          <img
+            className="object-cover w-full h-56 md:h-64 xl:h-80"
+            src={instructor.photo}
+            alt=""
+          />
+          <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
+           <div className='flex justify-between'>
+           <p className="text-sm font-medium tracking-wide text-white">
+            {instructor.name}
+            </p>
+            <div className='flex items-center gap-1'><TbMail></TbMail>
+            <p className='text-sm'>  {instructor.email}</p></div>
+           </div>
+            <p className="text-blue-400 uppercase mt-1 "> Instructor </p>
           </div>
-        </a>
-        <a href="/" aria-label="View Item">
-          <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
-            <img
-              className="object-cover w-full h-56 md:h-64 xl:h-80"
-              src="https://images.pexels.com/photos/3182750/pexels-photo-3182750.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-              alt=""
-            />
-            <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
-              <p className="text-sm font-medium tracking-wide text-white">
-                Leverage agile frameworks to provide a robust synopsis
-              </p>
-            </div>
-          </div>
-        </a>
-        <a href="/" aria-label="View Item">
-          <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
-            <img
-              className="object-cover w-full h-56 md:h-64 xl:h-80"
-              src="https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-              alt=""
-            />
-            <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
-              <p className="text-sm font-medium tracking-wide text-white">
-                Dingy I'm tellin' you rhubaahb Bangah Jo-Jeezly
-              </p>
-            </div>
-          </div>
-        </a>
-        <a href="/" aria-label="View Item">
-          <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
-            <img
-              className="object-cover w-full h-56 md:h-64 xl:h-80"
-              src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-              alt=""
-            />
-            <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
-              <p className="text-sm font-medium tracking-wide text-white">
-                Rough pomfret lemon shark plownose chimaera
-              </p>
-            </div>
-          </div>
-        </a>
+        </div>)
+         }
       </div>
       <div className="text-center">
       <Link className="group relative inline-flex border border-secondary focus:outline-none w-full sm:w-auto"

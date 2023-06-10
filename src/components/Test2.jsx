@@ -1,4 +1,3 @@
-import React from 'react';
 
 const Test2 = () => {
     return (
@@ -6,7 +5,7 @@ const Test2 = () => {
       <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
         <div>
           <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-primary uppercase rounded-full bg-teal-accent-400">
-            Brand new
+            Our Curriculum 
           </p>
         </div>
         <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-secondary sm:text-4xl md:mx-auto">
@@ -33,49 +32,44 @@ const Test2 = () => {
                 height="24"
               />
             </svg>
-            <span className="relative">The</span>
-          </span>{' '}
-          quick, brown fox jumps over a lazy dog
+            <span className="relative">Reelify Film Camp Curriculum Overview</span>
+          </span>
+          
         </h2>
         <p className="text-base text-accent/80 md:text-lg">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque rem aperiam, eaque ipsa quae.
+         We believe that filmmaking is one of the best ways to learn about the art of collaboration, and many of our students continue to make movies together well after the summer ends.
         </p>
       </div>
       <div className="grid gap-8 row-gap-5 mb-8 md:row-gap-8 lg:grid-cols-4 sm:grid-cols-2">
         <div className="duration-300 transform bg-secondary/20 border-l-4 border-secondary hover:-translate-y-2">
           <div className="h-full p-5 border border-l-0 border-base-100 rounded-r shadow-sm">
-            <h6 className="mb-2 font-semibold leading-5">The doctor said</h6>
+            <h6 className="mb-2 font-semibold leading-5">Core Elements</h6>
             <p className="text-sm text-accent/80">
-              Sportacus andrew weatherall goose Refined gentlemen super mario
-              des lynam alpha trion zap rowsdower.
+            No matter the level of experience, every level of the Camp Flix curriculum is organized around the three phases of the filmmaking creative process.
             </p>
           </div>
         </div>
         <div className="duration-300 transform bg-secondary/20 border-l-4 border-secondary hover:-translate-y-2">
           <div className="h-full p-5 border border-l-0 border-base-100 rounded-r shadow-sm">
-            <h6 className="mb-2 font-semibold leading-5">The doctor said</h6>
+            <h6 className="mb-2 font-semibold leading-5">Pre-Production</h6>
             <p className="text-sm text-accent/80">
-              Sportacus andrew weatherall goose Refined gentlemen super mario
-              des lynam alpha trion zap rowsdower.
+            Pre-production planning will include developing a script, storyboarding, location scouting, set design and casting.
             </p>
           </div>
         </div>
         <div className="duration-300 transform bg-secondary/20 border-l-4 border-secondary hover:-translate-y-2">
           <div className="h-full p-5 border border-l-0 border-base-100 rounded-r shadow-sm">
-            <h6 className="mb-2 font-semibold leading-5">The doctor said</h6>
+            <h6 className="mb-2 font-semibold leading-5">Production</h6>
             <p className="text-sm text-accent/80">
-              Sportacus andrew weatherall goose Refined gentlemen super mario
-              des lynam alpha trion zap rowsdower.
+            Young filmmakers will work closely with seasoned professionals in specific crew positions, including Director, Cinematographer, Lighting and Sound Supervisor.
             </p>
           </div>
         </div>
         <div className="duration-300 transform bg-secondary/20 border-l-4 border-secondary hover:-translate-y-2">
           <div className="h-full p-5 border border-l-0 border-base-100 rounded-r shadow-sm">
-            <h6 className="mb-2 font-semibold leading-5">The doctor said</h6>
+            <h6 className="mb-2 font-semibold leading-5">Post-Production</h6>
             <p className="text-sm text-accent/80">
-              Sportacus andrew weatherall goose Refined gentlemen super mario
-              des lynam alpha trion zap rowsdower.
+            Young filmmakers will study and evaluate each shot and select the best takes based on camera work, composition, continuity, sound quality and other criteria. 
             </p>
           </div>
         </div>
