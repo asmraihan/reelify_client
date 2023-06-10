@@ -16,6 +16,8 @@ import ManageUsers from '../pages/Dashboard/Admin/ManageUsers'
 import ManageClasses from '../pages/Dashboard/Admin/ManageClasses'
 import UserProfile from '../pages/Dashboard/UserProfile'
 import PaymentPage from '../pages/Dashboard/User/PaymentPage'
+import AdminRoute from './AdminRoute'
+import InstructorRoute from './InstructorRoute'
 
 
 
@@ -73,20 +75,20 @@ export const router = createBrowserRouter([
           
           {
             path: '/dashboard/my-classes',
-            element: <MyClasses></MyClasses>
+            element: <InstructorRoute><MyClasses></MyClasses></InstructorRoute>
           },
           {
             path: '/dashboard/add-classes',
-            element: <AddClasses></AddClasses>
+            element: <InstructorRoute><AddClasses></AddClasses></InstructorRoute>
           },
 
           {
             path: '/dashboard/manage-users',
-            element: <ManageUsers></ManageUsers>
+            element: <AdminRoute><ManageUsers></ManageUsers></AdminRoute>
           },
           {
             path: '/dashboard/manage-classes',
-            element: <ManageClasses></ManageClasses>
+            element: <AdminRoute><ManageClasses></ManageClasses></AdminRoute>
           },
 
         ]

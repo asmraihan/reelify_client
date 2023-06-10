@@ -43,21 +43,21 @@ const PopularClass = () => {
       }}
     >
       <div className="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700  backdrop-blur-sm bg-gray-800/60 opacity-0 group-hover:opacity-100 text-center space-y-5">
-        <h2 className="mb-2 text-xl font-semibold text-white tracking-wide capitalize">
+        <h2 className="text-xl font-semibold text-white tracking-wide capitalize">
           {singleClass?.name}
         </h2>
     <div className= 'opacity-0 group-hover:opacity-100'>
     <div>
        <span className="text-blue-400 uppercase "> Instructor : </span>
-        <span className='ml-2'> {singleClass?.instructor}</span>
+        <span className='ml-2 text-white'> {singleClass?.instructor}</span>
        </div>
        <div>
        <span className="text-blue-400 uppercase "> Student : </span>
-        <span className='ml-2'> {singleClass?.students}</span>
+        <span className='ml-2 text-white'> {singleClass?.students}</span>
        </div>
        <div>
        <span className="text-blue-400 uppercase "> Fee : </span>
-        <span className='ml-2'> ${singleClass?.price}</span>
+        <span className='ml-2 text-white'> ${singleClass?.price}</span>
        </div>
     </div>
       </div>
@@ -66,7 +66,7 @@ const PopularClass = () => {
       </div>
       <div className="text-center mt-8">
         <Link className="group relative inline-flex border border-secondary focus:outline-none w-full sm:w-auto"
-          href="" target="_blank">
+         to='/classes'>
           <span className="w-full inline-flex items-center justify-center self-stretch px-4 py-2 text-sm text-secondary text-center font-bold uppercase  ring-1 ring-secondary  transform transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1 group-focus:-translate-y-1 group-focus:-translate-x-1">See more <FaArrowRight></FaArrowRight></span>
         </Link>
       </div>

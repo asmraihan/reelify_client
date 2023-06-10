@@ -1,4 +1,5 @@
 import { FaArrowRight } from "react-icons/fa";
+import { TbMail } from "react-icons/tb";
 
 const InstructorCard = ({instructor}) => {
     console.log(instructor)
@@ -28,14 +29,13 @@ const InstructorCard = ({instructor}) => {
               INSTRUCTOR
           </p>
           <button className="p-4 bg-red-600 rounded-full hover:bg-red-500 focus:bg-red-700 transition ease-in duration-200 focus:outline-none">
-            <FaArrowRight className="text-white"></FaArrowRight>
+            <TbMail className="text-white" size={20}></TbMail>
           </button>
         </div>
         <div className="pt-6 pb-8 text-accent pl-7 space-y-2">
-          <p>Fullstack Developer </p>
-          <p>Fullstack Developer </p>
-          <p>Fullstack Developer </p>
-          <p>Fullstack Developer </p>
+          <p>Name : {instructor.name} </p>
+          <p>Email : {instructor.email}  </p>
+        
         </div>
         
       </div>

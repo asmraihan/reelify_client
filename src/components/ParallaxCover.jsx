@@ -3,10 +3,11 @@ import { Parallax } from 'react-parallax';
 const ParallaxCover = () => {
     return (
         <Parallax
+        bgClassName='-mt-40'
         blur={{ min: -15, max: 15 }}
         bgImage='https://i.ibb.co/qJ30CY6/rendy-novantino-PEN0-Wz4-MA8-unsplash.jpg'
         bgImageAlt="the menu"
-        strength={400}
+        strength={-400}
         
     >
         <div className="h-[300px] ">

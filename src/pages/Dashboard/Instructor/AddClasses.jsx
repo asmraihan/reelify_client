@@ -2,10 +2,12 @@ import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { imageUpload } from "../../../api/utils";
 import { addClass } from "../../../api/classes";
+import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 
 const AddClasses = () => {
-
+    const navigate = useNavigate()
     const {user}= useContext(AuthContext)
     const handleAdd = (e) => {
         e.preventDefault();
@@ -29,6 +31,10 @@ const AddClasses = () => {
             // adding class to db
             addClass(classData).then(data=>{
                 console.log(data)
+                if(data.acknowledged){
+                    toast.success('Class added successfully')
+                    navigate('/dashboard/my-classes')
+                }
             })
             .catch(err=>{
                 console.log(err)

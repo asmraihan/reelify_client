@@ -5,7 +5,8 @@ export const saveUser = (user) => {
 
             email: user.email,
             name: user.displayName,
-            photo: user.photoURL
+            photo: user.photoURL,
+          
             
         // more user details goes here
         // ===========================
