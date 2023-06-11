@@ -23,7 +23,7 @@ const Footer = () => {
                   href="#"
                   className="block text-2xl font-medium  hover:opacity-75  sm:text-3xl"
                 >
-                  0123456789
+                  01630490203
                 </a>
               </p>
               <ul className="mt-8 space-y-1 text-sm">
@@ -144,28 +144,14 @@ const Footer = () => {
                 <p className="font-medium">Services</p>
                 <nav aria-label="Footer Navigation - Services" className="mt-6">
                   <ul className="space-y-4 text-sm">
-                    <li>
-                      <a
-                        href="#"
-                        className="transition hover:opacity-75 "
-                      >
-                        Wev development
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="transition hover:opacity-75"
-                      >
-                        Web Design
-                      </a>
-                    </li>
+                   
+                    
                     <li>
                       <a
                         href="#"
                         className=" transition hover:opacity-75 "
                       >
-                      Software Development
+                      Development
                       </a>
                     </li>
                     <li>
@@ -181,14 +167,14 @@ const Footer = () => {
                         href="#"
                         className=" transition hover:opacity-75 "
                       >
-                        SEO Optimisation
+                        Tour
                       </a>
                     </li>
                   </ul>
                 </nav>
               </div>
               <div>
-                <p className="font-medium ">Company</p>
+                <p className="font-medium ">Camp Info</p>
                 <nav aria-label="Footer Navigation - Company" className="mt-6">
                   <ul className="space-y-4 text-sm">
                     <li>
@@ -252,7 +238,7 @@ const Footer = () => {
                 </ul>
               </nav>
               <p className="mt-8 text-xs   sm:mt-0">
-                © 2022. Web Dev. All rights reserved.
+              Asm Raihan  © 2023.  All rights reserved.
               </p>
             </div>
           </div>

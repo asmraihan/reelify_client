@@ -15,10 +15,9 @@ const SelectedClasses = () => {
       const res = await axiosSecure.get(`/selected/${user?.email}`)
       console.log('from axiosSecure',res.data)
       return res.data
-
     }
     })
-console.log(classes)
+// console.log(classes)
     return (
         <div className="overflow-x-auto">
         <table className="table table-zebra">

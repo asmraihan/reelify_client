@@ -3,7 +3,7 @@ import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 import { useQuery } from '@tanstack/react-query';
-
+import { motion } from "framer-motion"
 const PopularClass = () => {
   const { user, loading } = useContext(AuthContext)
   const { data: classes = [] } = useQuery({
@@ -16,6 +16,22 @@ const PopularClass = () => {
     }
   })
   // console.log(classes)
+  const PreviewAnimation = {
+    initial: {
+      y:30,
+      opacity: 0,
+      scale: 0.9
+    },
+    animate: {
+      y:0,
+      opacity: 1,
+      scale: 1,
+      transition: {
+        ease: [0.6, 0.01, 0.05, 0.95],
+        duration: 0.8,
+      }
+    }
+  }
   return (
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-20 lg:py-20">
       <div className="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
@@ -35,12 +51,15 @@ const PopularClass = () => {
       </div>
       <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
     {
-      classes.map((singleClass)=>  <div
+      classes.map((singleClass)=>  <motion.div
       key={singleClass._id}
       className="overflow-hidden bg-cover rounded-lg cursor-pointer h-96 group"
       style={{
         backgroundImage: `url(${singleClass.photo})`
       }}
+      initial="initial"
+      whileInView="animate"
+      variants={PreviewAnimation}
     >
       <div className="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700  backdrop-blur-sm bg-gray-800/60 opacity-0 group-hover:opacity-100 text-center space-y-5">
         <h2 className="text-xl font-semibold text-white tracking-wide capitalize">
@@ -61,7 +80,7 @@ const PopularClass = () => {
        </div>
     </div>
       </div>
-    </div>)
+    </motion.div>)
     }
       </div>
       <div className="text-center mt-8">

@@ -1,5 +1,22 @@
+import { motion } from "framer-motion"
 
 const Showcase = () => {
+  const PreviewAnimation = {
+    initial: {
+      y:0,
+      opacity: 0,
+      scale: 0.9
+    },
+    animate: {
+      y:0,
+      opacity: 1,
+      scale: 1,
+      transition: {
+        ease: [0.6, 0.01, 0.05, 0.95],
+        duration: 0.8,
+      }
+    }
+  }
     return (
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div className="grid gap-10 lg:grid-cols-2">
@@ -35,7 +52,12 @@ const Showcase = () => {
               </a>
             </div>
           </div>
-          <div className="flex items-center justify-center -mx-4 lg:pl-8">
+          <motion.div 
+          className="flex items-center justify-center -mx-4 lg:pl-8"
+          initial="initial"
+          whileInView="animate"
+          variants={PreviewAnimation}
+          >
             <div className="flex flex-col items-end px-3">
               <img
                 className="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56"
@@ -55,7 +77,7 @@ const Showcase = () => {
                 alt=""
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     );

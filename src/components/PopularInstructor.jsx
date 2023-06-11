@@ -4,6 +4,8 @@ import { useQuery } from '@tanstack/react-query';
 import { useContext } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 import {TbMail} from "react-icons/tb";
+import { motion } from "framer-motion"
+
 const PopularInstructor = () => {
   const {user, loading} = useContext(AuthContext)
   const {data: instructors=[]} = useQuery({
@@ -16,7 +18,22 @@ const PopularInstructor = () => {
   }
   })
   // console.log(instructors)
-
+  // const PreviewAnimation = {
+  //   initial: {
+  //     y:0,
+  //     opacity: 0,
+  //     scale: 0.9
+  //   },
+  //   animate: {
+  //     y:0,
+  //     opacity: 1,
+  //     scale: 1,
+  //     transition: {
+  //       ease: [0.6, 0.01, 0.05, 0.95],
+  //       duration: 0.8,
+  //     }
+  //   }
+  // }
     return (
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-20 lg:py-20">
       <div className="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
@@ -35,7 +52,13 @@ const PopularInstructor = () => {
       <div className="grid gap-10 lg:gap-20 row-gap-5 mb-8 lg:grid-cols-3 sm:row-gap-6 sm:grid-cols-2">
         
          {
-          instructors.map((instructor)=>  <div key={instructor._id} className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+          instructors.map((instructor)=>  <motion.div 
+          key={instructor._id} 
+          className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
+          initial="initial"
+          whileInView="animate"
+          // variants={PreviewAnimation}
+          >
           <img
             className="object-cover w-full h-56 md:h-64 xl:h-80"
             src={instructor.photo}
@@ -46,12 +69,12 @@ const PopularInstructor = () => {
            <p className="text-sm font-medium tracking-wide text-white">
             {instructor.name}
             </p>
-            <div className='flex items-center gap-1'><TbMail></TbMail>
-            <p className='text-sm'>  {instructor.email}</p></div>
+            <div className='flex items-center gap-1 text-white/70'><TbMail></TbMail>
+            <p className='text-sm '>  {instructor.email}</p></div>
            </div>
             <p className="text-blue-400 uppercase mt-1 "> Instructor </p>
           </div>
-        </div>)
+        </motion.div>)
          }
       </div>
       {/* <div className="text-center">

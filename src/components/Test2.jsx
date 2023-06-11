@@ -8,7 +8,7 @@ const Test2 = () => {
             Our Curriculum 
           </p>
         </div>
-        <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-secondary sm:text-4xl md:mx-auto">
+        <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-blue-500 sm:text-4xl md:mx-auto">
           <span className="relative inline-block">
             <svg
               viewBox="0 0 52 24"
@@ -41,7 +41,7 @@ const Test2 = () => {
         </p>
       </div>
       <div className="grid gap-8 row-gap-5 mb-8 md:row-gap-8 lg:grid-cols-4 sm:grid-cols-2">
-        <div className="duration-300 transform bg-secondary/20 border-l-4 border-secondary hover:-translate-y-2">
+        <div className="duration-300 transform bg-blue-500/20 border-l-4 border-blue-500 hover:-translate-y-2">
           <div className="h-full p-5 border border-l-0 border-base-100 rounded-r shadow-sm">
             <h6 className="mb-2 font-semibold leading-5">Core Elements</h6>
             <p className="text-sm text-accent/80">
@@ -49,7 +49,7 @@ const Test2 = () => {
             </p>
           </div>
         </div>
-        <div className="duration-300 transform bg-secondary/20 border-l-4 border-secondary hover:-translate-y-2">
+        <div className="duration-300 transform bg-emerald-500/20 border-l-4 border-emerald-500 hover:-translate-y-2">
           <div className="h-full p-5 border border-l-0 border-base-100 rounded-r shadow-sm">
             <h6 className="mb-2 font-semibold leading-5">Pre-Production</h6>
             <p className="text-sm text-accent/80">
@@ -57,7 +57,7 @@ const Test2 = () => {
             </p>
           </div>
         </div>
-        <div className="duration-300 transform bg-secondary/20 border-l-4 border-secondary hover:-translate-y-2">
+        <div className="duration-300 transform bg-yellow-500/20 border-l-4 border-yellow-500 hover:-translate-y-2">
           <div className="h-full p-5 border border-l-0 border-base-100 rounded-r shadow-sm">
             <h6 className="mb-2 font-semibold leading-5">Production</h6>
             <p className="text-sm text-accent/80">
@@ -65,7 +65,7 @@ const Test2 = () => {
             </p>
           </div>
         </div>
-        <div className="duration-300 transform bg-secondary/20 border-l-4 border-secondary hover:-translate-y-2">
+        <div className="duration-300 transform bg-violet-500/20 border-l-4 border-violet-500 hover:-translate-y-2">
           <div className="h-full p-5 border border-l-0 border-base-100 rounded-r shadow-sm">
             <h6 className="mb-2 font-semibold leading-5">Post-Production</h6>
             <p className="text-sm text-accent/80">

@@ -12,9 +12,9 @@ const ParallaxCover = () => {
     >
         <div className="h-[300px] ">
             <div className="bg-black/50 object-cover h-full w-full flex flex-col justify-center">
-                <div className="max-w-md ml-36 text-white">
-                    <h1 className="mb-5 text-5xl font-bold uppercase">Something</h1>
-                    <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                <div className="max-w-xl ml-36 text-white">
+                    <h1 className="mb-5 text-5xl font-bold uppercase">Live for the day!</h1>
+                    <p className="mb-5">Summer camp is a specially crafted program designed for children and teenagers during their summer vacation holidays as they come together and have fun while learning lifelong lessons.</p>
                 </div>
             </div>
         </div>
