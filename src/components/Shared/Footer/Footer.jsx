@@ -7,9 +7,9 @@ const Footer = () => {
       >
         <div className="relative hidden lg:block h-32 lg:col-span-2 lg:h-full ">
           <img
-            src="https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            src="https://i.ibb.co/BBXqc68/20190421-A-Film-Academy-Summer-Camp-Stevens-THISLEARNING.jpg"
             alt=""
-            className="absolute rotate-180 inset-0 object-cover w-full h-full"
+            className="absolute  w-full h-full"
           />
         </div>
         <div className="px-4 py-12 sm:px-6 lg:col-span-3 lg:px-8">

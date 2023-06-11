@@ -2,18 +2,20 @@ import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { useQuery } from "@tanstack/react-query";
 import SelectedRow from "./SelectedRow";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
 
 const SelectedClasses = () => {
 
   const {user, loading} = useContext(AuthContext)
-
+  const [axiosSecure] = useAxiosSecure()
   const {data: classes=[], refetch} = useQuery({
     queryKey: ['selected', user],
     enabled: !loading,
     queryFn: async () => {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/selected`)
-        const data = await res.json()
-        return data
+      const res = await axiosSecure.get(`/selected/${user?.email}`)
+      console.log('from axiosSecure',res.data)
+      return res.data
+
     }
     })
 console.log(classes)

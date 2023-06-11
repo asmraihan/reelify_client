@@ -70,8 +70,8 @@ const ClassRow = ({ singleClass, index, refetch }) => {
             <td>
                 <div className="flex items-center space-x-3">
                     <div className="avatar">
-                        <div className="mask mask-parallelogram-2 w-16 h-16">
-                            <img src={singleClass?.photo} alt="Avatar Tailwind CSS Component" />
+                        <div className="mask  w-16 h-16">
+                            <img src={singleClass?.photo} alt="Avatar" />
                         </div>
                     </div>
                     <div>
