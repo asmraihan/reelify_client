@@ -3,7 +3,6 @@ import { TbMail } from "react-icons/tb";
 
 const InstructorCard = ({instructor}) => {
     console.log(instructor)
-    const { name,email,photo} = instructor
     return (
         <div className="container mx-auto max-w-sm rounded-lg overflow-hidden shadow-lg my-2 bg-neutral">
         <div
@@ -19,7 +18,7 @@ const InstructorCard = ({instructor}) => {
           />
           <div className="text-center absolute w-full" style={{ bottom: "4rem" }}>
             <p className="text-white tracking-wide uppercase text-lg font-bold">
-              John Doe
+            {instructor.name} 
             </p>
           </div>
         </div>

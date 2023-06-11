@@ -5,7 +5,6 @@ import { AuthContext } from "../providers/AuthProvider";
 
 
 // ? this hook is for axios intercept
-
 const axiosSecure = axios.create({
     baseURL: `${import.meta.env.VITE_API_URL}`,
 })
@@ -31,7 +30,7 @@ const useAxiosSecure = () => {
             }
             return Promise.reject(error)
         })
-    }, [logOut, navigate, axiosSecure])
+    }, [logOut, navigate])
 
 
     return [axiosSecure]
