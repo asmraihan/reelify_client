@@ -92,9 +92,8 @@ const CheckOutForm = ({ singleClass }) => {
                 .then(res=>{
                     console.log(res.data.insetResult.insertedId)
                     if(res.data.insetResult.insertedId){
-                        console.log('ashse to')
-                        navigate('/dashboard/selected-classes')
                         toast.success('Payment successful')
+                        navigate('/dashboard/selected-classes')
                     }
                 })
         }

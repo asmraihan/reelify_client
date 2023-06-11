@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
+import { format } from 'date-fns'
 
 const EnrolledClasses = () => {
 
@@ -39,7 +40,7 @@ console.log(classes)
             <th>{index+1}</th>
          
             <td>{singleClass?.classTitle}</td>
-            <td>{singleClass?.date}</td>
+            <td>   {format(new Date(singleClass?.date), 'P')}</td>
           </tr>)
            }
             
