@@ -17,23 +17,7 @@ const PopularInstructor = () => {
       return data
   }
   })
-  // console.log(instructors)
-  // const PreviewAnimation = {
-  //   initial: {
-  //     y:0,
-  //     opacity: 0,
-  //     scale: 0.9
-  //   },
-  //   animate: {
-  //     y:0,
-  //     opacity: 1,
-  //     scale: 1,
-  //     transition: {
-  //       ease: [0.6, 0.01, 0.05, 0.95],
-  //       duration: 0.8,
-  //     }
-  //   }
-  // }
+ 
     return (
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-20 lg:py-20">
       <div className="flex flex-col-reverse mb-6 lg:justify-between lg:flex-row md:mb-8">

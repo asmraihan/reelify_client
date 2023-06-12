@@ -1,16 +1,26 @@
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../providers/AuthProvider'
 import { FaBars, FaBook, FaBookReader, FaBookmark, FaEdit, FaRegPlusSquare, FaSignOutAlt, FaTimes, FaUser, FaUserEdit, FaWallet } from 'react-icons/fa'
 import ThemeToggler from '../Utilities/ThemeToggler'
+import { getRole } from '../../api/auth'
 // import GuestMenu from './GuestMenu'
 // import HostMenu from './HostMenu'
 const Sidebar = () => {
     const navigate = useNavigate()
     const { user, logOut, role } = useContext(AuthContext)
-  
     const [isActive, setActive] = useState('false')
    
+    const [userRole=['user'], setUserRole] = useState('user')
+    console.log('ei user role',userRole)
+    useEffect(() => {
+        if (user) {
+          getRole(user?.email).then(data => { setUserRole(data) })
+        }
+      }, [user])
+
+
+
     // Sidebar Responsive Handler
     const handleToggle = () => {
         setActive(!isActive)
@@ -75,18 +85,53 @@ const Sidebar = () => {
                                 </p>
                             </Link>
                             <p className='mx-2 mt-4 text-sm font-medium text-info uppercase'>
-                                    {role}
+                                    {userRole}
                                 </p>
                         </div>
                     </div>
 
-                    {/* Nav Items */}
+                 
                     <div className='flex flex-col justify-between flex-1 mt-6'>
                         <nav>
-                            {/* //TODO here role wise */}
+                           
+
+                    {
+                                userRole === 'admin' && <>
+                                  <NavLink to='/dashboard/manage-users'
+                                className={({ isActive }) =>
+                                    `flex items-center px-4 py-2 mt-5 text transition-colors duration-300 transform hover:text-info hover:bg-neutral  ${isActive ? 'bg-info/30 ' : 'text-gray'}`}>
+                                <FaUserEdit className='w-5 h-5'/> <span className='mx-4 font-medium'>Manage Users</span>
+                            </NavLink>
+                                <NavLink to='/dashboard/manage-classes'
+                                className={({ isActive }) =>
+                                    `flex items-center px-4 py-2 mt-5 text transition-colors duration-300 transform hover:text-info hover:bg-neutral  ${isActive ? 'bg-info/30' : 'text-gray'}`}>
+                                <FaEdit className='w-5 h-5'/> <span className='mx-4 font-medium'>Manage Classes</span>
+                            </NavLink>
+                                </>
+                            }
+
 
                             {
-                                role === 'user' && <>
+                                userRole == 'user' && <>
+                                <NavLink to='/dashboard/selected-classes'
+                                className={({ isActive }) =>
+                                    `flex items-center px-4 py-2 mt-5 text transition-colors duration-300 transform hover:text-info hover:bg-neutral  ${isActive ? 'bg-info/30' : 'text-gray'}`}>
+                                <FaBook className='w-5 h-5'/> <span className='mx-4 font-medium'>My Selected Classes</span>
+                            </NavLink>
+                            <NavLink to='/dashboard/enrolled-classes'
+                                className={({ isActive }) =>
+                                    `flex items-center px-4 py-2 mt-5 text transition-colors duration-300 transform hover:text-info hover:bg-neutral  ${isActive ? 'bg-info/30' : 'text-gray'}`}>
+                                <FaBookmark className='w-5 h-5'/> <span className='mx-4 font-medium'>My Enrolled Classes</span>
+                            </NavLink>
+                            <NavLink to='/dashboard/payment-history'
+                                className={({ isActive }) =>
+                                    `flex items-center px-4 py-2 mt-5 text transition-colors duration-300 transform hover:text-info hover:bg-neutral  ${isActive ? 'bg-info/30' : 'text-gray'}`}>
+                                <FaWallet className='w-5 h-5'/> <span className='mx-4 font-medium'>Payment History</span>
+                            </NavLink>
+                                </>
+                            }
+                            {
+                                userRole === '' && <>
                                 <NavLink to='/dashboard/selected-classes'
                                 className={({ isActive }) =>
                                     `flex items-center px-4 py-2 mt-5 text transition-colors duration-300 transform hover:text-info hover:bg-neutral  ${isActive ? 'bg-info/30' : 'text-gray'}`}>
@@ -106,7 +151,7 @@ const Sidebar = () => {
                             }
 
                             {
-                                role === 'instructor' && <>
+                                userRole === 'instructor' && <>
                                 <NavLink to='/dashboard/my-classes'
                                 className={({ isActive }) =>
                                     `flex items-center px-4 py-2 mt-5 text transition-colors duration-300 transform hover:text-info hover:bg-neutral  ${isActive ? 'bg-info/30' : 'text-gray'}`}>
@@ -120,20 +165,7 @@ const Sidebar = () => {
                                 </>
                             }
 
-                            {
-                                role === 'admin' && <>
-                                  <NavLink to='/dashboard/manage-users'
-                                className={({ isActive }) =>
-                                    `flex items-center px-4 py-2 mt-5 text transition-colors duration-300 transform hover:text-info hover:bg-neutral  ${isActive ? 'bg-info/30 ' : 'text-gray'}`}>
-                                <FaUserEdit className='w-5 h-5'/> <span className='mx-4 font-medium'>Manage Users</span>
-                            </NavLink>
-                                <NavLink to='/dashboard/manage-classes'
-                                className={({ isActive }) =>
-                                    `flex items-center px-4 py-2 mt-5 text transition-colors duration-300 transform hover:text-info hover:bg-neutral  ${isActive ? 'bg-info/30' : 'text-gray'}`}>
-                                <FaEdit className='w-5 h-5'/> <span className='mx-4 font-medium'>Manage Classes</span>
-                            </NavLink>
-                                </>
-                            }
+                            
 
                         </nav>
                     </div>

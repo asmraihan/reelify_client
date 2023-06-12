@@ -6,7 +6,6 @@ export const saveUser = (user) => {
             email: user.email,
             name: user.displayName,
             photo: user.photoURL,
-          
             
         // more user details goes here
         // ===========================
@@ -27,14 +26,7 @@ export const saveUser = (user) => {
 export const getRole = async (email) => {
     const response = await fetch(`${import.meta.env.VITE_API_URL}/users/${email}`)
     const user = await response.json()
-    console.log(user)
-    return user?.role || 'user'
+    console.log('error ashe',user?.role)
+    return user?.role 
 }
 
-// get all instructors by role
-// export const getAllInstructors = async () => {
-//     const response = await fetch(`${import.meta.env.VITE_API_URL}/instructors`)
-//     const instructors = await response.json()
-//     console.log(instructors)
-//     return instructors
-// }

@@ -2,7 +2,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { TbMail } from "react-icons/tb";
 
 const InstructorCard = ({instructor}) => {
-    console.log(instructor)
+    // console.log(instructor)
     return (
         <div className="container mx-auto max-w-sm rounded-lg overflow-hidden shadow-lg my-2 bg-neutral">
         <div
