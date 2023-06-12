@@ -22,7 +22,7 @@
 ### Instructor Functionalities
 - Instructor can add classes
 - Instructor can see their added classes in their dashboard
-### User Functionalities
+### Admin Functionalities
 - Admin can manage users and classes
 - Admin can make any user as instructor or admin
 - Admin can approve or reject any class and give feedback to instructor
