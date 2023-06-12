@@ -76,7 +76,7 @@ const PaymentPage = () => {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className=''>
                     <h2 className="text-sm font-medium">Purchase Summary</h2>
                     <div className="bg-base-100 rounded mt-4 shadow-lg py-6">
 
@@ -92,19 +92,12 @@ const PaymentPage = () => {
                                 <span className="font-semibold">${singleClass.price}</span>
                             </div>
                             <span className="text-xs text-gray-500 mt-2">
-                                After 1 month free: $22/mo.
+                               Item : {singleClass?.name}
                             </span>
                         </div>
-                        <div className="flex items-center px-8 mt-8">
-                            <input id="termsConditions" className='checkbox checkbox-xs' type="checkbox" />
-                            <label className="text-xs text-gray-500 ml-2" htmlFor="termsConditions">
-                                I agree to the terms and conditions.
-                            </label>
-                        </div>
+                       
                         <div className="flex flex-col px-8 pt-4">
-                            <button className="flex items-center justify-center bg-blue-600 text-sm font-medium w-full h-10 rounded text-blue-50 hover:bg-blue-700">
-                                Confirm
-                            </button>
+                           
                             <button className="text-xs text-blue-500 mt-3 underline">
                                 Have a coupon code?
                             </button>

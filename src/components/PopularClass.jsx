@@ -35,7 +35,7 @@ const PopularClass = () => {
   return (
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-20 lg:py-20">
       <div className="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
-        <h2 className="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight text-accent sm:text-4xl sm:leading-none md:mb-6 group">
+        <h2 className="max-w-lg mb-5 font-sans text-2xl lg:text-3xl font-bold tracking-tight text-accent sm:text-4xl sm:leading-none md:mb-6 group">
           <span className="inline-block mb-1 sm:mb-4">
             There is no must in art
             <br className="hidden md:block" />

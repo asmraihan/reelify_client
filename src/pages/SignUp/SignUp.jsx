@@ -10,7 +10,7 @@ import { saveUser } from '../../api/auth';
 const SignUp = () => {
     const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
     const navigate = useNavigate()
-    const {createUser, updateUserProfile} = useContext(AuthContext)
+    const {createUser, updateUserProfile ,logOut} = useContext(AuthContext)
     const onSubmit = data => {
         console.log(data)
         createUser(data.email, data.password)
@@ -21,10 +21,11 @@ const SignUp = () => {
             .then(()=>{
                 console.log('user updated')
                 reset()
-                toast.success('Profile Created successfully')
+                toast.success('Profile Created successfully. Please login')
+                logOut()
                 // save user to db
                 saveUser(loggedUser)
-                navigate('/')
+                navigate('/login')
             })
             .catch(err=>{
                 console.log(err)
@@ -57,7 +58,7 @@ const SignUp = () => {
             />
           </svg>
           <div className="relative px-4 py-16 mx-auto overflow-hidden sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-            <div className="flex flex-col items-center justify-between xl:flex-row">
+            <div className="flex  flex-col gap-10 lg:gap-0 items-center justify-between xl:flex-row">
             
               <div className="w-full max-w-xl xl:px-8 xl:w-5/12">
                 <div className="bg-neutral rounded shadow-2xl p-7 sm:p-10">

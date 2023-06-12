@@ -26,9 +26,9 @@ const MyClasses = () => {
                         <tr>
                             <th>#</th>
                             <th>Class</th>
-                            <th>Status</th>
                             <th>Seats</th>
                             <th>Total Enrolled</th>
+                            <th>Status</th>
                             <th>Feedback</th>
                             <th>Action</th>
                         </tr>
@@ -39,9 +39,9 @@ const MyClasses = () => {
                             classes.map((singleClass, index)=>  <tr key={index}>
                             <th>{index+1}</th>
                             <td>{singleClass?.name}</td>
-                            <td>{singleClass?.status}</td>
                             <td>{singleClass?.seats}</td>
                             <td>{singleClass?.students}</td>
+                            <td>{singleClass?.status}</td>
                             <td>{singleClass?.feedback}</td>
                             <td> <button className="btn btn-secondary btn-sm text-accent">Update</button> </td>
                         </tr>)

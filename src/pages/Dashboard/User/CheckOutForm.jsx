@@ -6,7 +6,6 @@ import { useEffect } from 'react';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { useContext } from 'react';
-import { set } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 const CheckOutForm = ({ singleClass }) => {
@@ -87,6 +86,8 @@ const CheckOutForm = ({ singleClass }) => {
                 date: new Date(),
                 classId: singleClass.classId,
                 classTitle: singleClass.name,
+                instructor: singleClass.instructor,
+                photo: singleClass.photo
             }
             axiosSecure.post('/payments', payment)
                 .then(res=>{

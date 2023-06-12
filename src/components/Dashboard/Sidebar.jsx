@@ -26,7 +26,7 @@ const Sidebar = () => {
                 <div>
                     <div className='block cursor-pointer p-4 font-bold'>
                         {/* <img src="" alt="logo" />  */}
-                        <p className='text-accent'>Dashboard</p>
+                        <p className='text-accent text-xl'>Dashboard</p>
                     </div>
                 </div>
 

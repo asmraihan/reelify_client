@@ -26,7 +26,9 @@ console.log(classes)
           <thead>
             <tr>
               <th>#</th>
+              <th></th>
               <th>Class Title</th>
+              <th>Instructor</th>   
               <th>Enroll Date</th>   
             </tr>
           </thead>
@@ -39,7 +41,13 @@ console.log(classes)
             >
             <th>{index+1}</th>
          
+            <td>  <div className="avatar">
+                    <div className="mask w-16 h-16">
+                        <img src={singleClass?.photo} alt="class img" />
+                    </div>
+                </div></td>
             <td>{singleClass?.classTitle}</td>
+            <td>{singleClass?.instructor}</td>
             <td>   {format(new Date(singleClass?.date), 'P')}</td>
           </tr>)
            }

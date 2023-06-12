@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 
 const UserProfile = () => {
-    const { user } = useContext(AuthContext)
+    const { user, role } = useContext(AuthContext)
    
     return (
         <div className=' w-5/6 mx-auto my-20'>
@@ -12,6 +12,7 @@ const UserProfile = () => {
                    <div className='shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] p-5 space-y-4'>
                    <h2>Name : {user?.displayName ? user?.displayName : "Not available"}</h2>
                     <h2>Email : {user?.email ? user?.email : "Not available"}</h2>
+                    <h2 >Role : <span className='uppercase'>{role ? role : "User"}</span></h2>
                     <h2>Joined on : {user?.metadata?.creationTime}</h2>
                     {/* <button className='btn btn-sm mt-2'>Edit</button> */}
                    </div>

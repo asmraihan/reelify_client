@@ -22,7 +22,7 @@ const InstructorCard = ({instructor}) => {
             </p>
           </div>
         </div>
-        <div className="relative flex justify-between items-center flex-row px-6 z-50 -mt-10">
+        <div className="relative flex justify-between items-center flex-row px-6 z-10 -mt-10">
           <p className="flex items-center text-gray-400">
             <span className="inline-block w-3 h-3 bg-green-500 rounded-full mr-2" />
               INSTRUCTOR

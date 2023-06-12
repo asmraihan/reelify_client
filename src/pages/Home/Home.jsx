@@ -13,7 +13,8 @@ const Home = () => {
     return (
         <div className="">
           <Banner></Banner>
-          <PopularClass></PopularClass>
+        <div className="w-11/12 mx-auto">
+        <PopularClass></PopularClass>
           <PopularInstructor></PopularInstructor>
           <ParallaxCover></ParallaxCover>
           <Showcase></Showcase>
@@ -21,6 +22,7 @@ const Home = () => {
           <Test2></Test2>
           <Pricing></Pricing>
           <Contact></Contact>
+        </div>
         </div>
     );
 };
