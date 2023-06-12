@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, ScrollRestoration } from 'react-router-dom'
 import Sidebar from '../components/Dashboard/Sidebar'
 
 
@@ -11,6 +11,7 @@ const DashboardLayout = () => {
           <Outlet />
         </div>
       </div>
+      <ScrollRestoration></ScrollRestoration>
     </div>
   )
 }

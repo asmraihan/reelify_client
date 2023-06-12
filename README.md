@@ -2,10 +2,10 @@
 # Reelify_Summer_Camp
 
 ## Live Link
-🔗Hosted in firebase -> [Reelify Live](https://autosport-cars.web.app/)  
+🔗Hosted in firebase -> [Reelify Live](https://reelify-camp.firebaseapp.com)  
 
 >Features
-- Website : [Reelify.com](https://autosport-cars.web.app/)
+- Website : [Reelify.com](https://reelify-camp.firebaseapp.com)
 - Built using React 18
 - Tailwind utility based framework 
 - Responsive design

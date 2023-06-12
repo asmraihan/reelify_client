@@ -1,6 +1,6 @@
 
 import NavBar from '../components/Shared/NavBar/NavBar';
-import { Outlet } from 'react-router-dom';
+import { Outlet, ScrollRestoration } from 'react-router-dom';
 import Footer from '../components/Shared/Footer/Footer';
 
 const Main = () => {
@@ -11,6 +11,7 @@ const Main = () => {
                 <Outlet></Outlet>
             </div>
             <Footer></Footer>
+            <ScrollRestoration></ScrollRestoration>
         </div>
     );
 };

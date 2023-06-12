@@ -167,7 +167,7 @@ const Footer = () => {
                         href="#"
                         className=" transition hover:opacity-75 "
                       >
-                        Tour
+                        Tour Management
                       </a>
                     </li>
                   </ul>
