@@ -2,10 +2,10 @@
 # Reelify_Summer_Camp
 
 ## Live Link
-🔗Hosted in firebase -> [Reelify Live](https://reelify-camp.firebaseapp.com)  
+🔗Hosted in firebase -> [Reelify Live](https://reelify-camp.web.app)  
 
 >Features
-- Website : [Reelify.com](https://reelify-camp.firebaseapp.com)
+- Website : [Reelify.com](https://reelify-camp.web.app)
 - Built using React 18
 - Tailwind utility based framework 
 - Responsive design
